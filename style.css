@@ -1,0 +1,14 @@
+listItem {
+    height: 20px;
+    width: 30px;
+    background-color: blue;
+    margin: 3px;
+    color: black;
+}
+
+ul {
+    list-style: none;
+
+
+
+}
