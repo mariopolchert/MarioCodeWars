@@ -1027,3 +1027,57 @@
 // "recede"   =>  "()()()"
 // "Success"  =>  ")())())"
 // "(( @"     =>  "))(("
+//--------------------------------------------------------------------------------------
+
+// const quarterOf = (m) => m > 9 ? 4 : m > 6 ? 3 : m > 3 ? 2 : 1;
+
+// console.log(quarterOf(3)); // 1)
+// console.log(quarterOf(8)); // 3)
+// console.log(quarterOf(11)); // 4)
+//-------------------------------------------------------------------------------------
+
+// function warnTheSheep(arr) {
+//     let wolfIndex = arr.findIndex((el) => el === "wolf");
+//     return wolfIndex === arr.length - 1
+//         ? "Pls go away and stop eating my sheep"
+//         : `Oi! Sheep number ${
+//               arr.length - wolfIndex - 1
+//           }! You are about to be eaten by a wolf`;
+// }
+
+// const warnTheSheep = (a) =>
+//     (a = a.length - a.indexOf("wolf") - 1)
+//         ? `Oi! Sheep number ${a}! You are about to be eaten by a wolf!`
+//         : "Pls go away and stop eating my sheep";
+
+// const warnTheSheep = (queue) =>
+//     ((val) =>
+//         val
+//             ? `Oi! Sheep number ${val}! You are about to be eaten by a wolf!`
+//             : `Pls go away and stop eating my sheep`)(
+//         queue.reverse().indexOf("wolf")
+//     );
+
+// // Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+// // Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+// // Input: ["sheep", "sheep", "wolf"]
+// // Output: "Pls go away and stop eating my sheep"
+
+// console.log(
+//     warnTheSheep([
+//         "sheep",
+//         "sheep",
+//         "sheep",
+//         "sheep",
+//         "sheep",
+//         "wolf",
+//         "sheep",
+//         "sheep",
+//     ])
+//); // "Oi! Sheep number 5! You are about to be eaten by a wolf!"
+// console.log(
+//     warnTheSheep(["wolf", "sheep", "sheep", "sheep", "sheep", "sheep", "sheep"])
+// ); // "Oi! Sheep number 6! You are about to be eaten by a wolf!"
+// console.log(warnTheSheep(["sheep", "wolf", "sheep"])); // "Oi! Sheep number 1! You are about to be eaten by a wolf
+// console.log(warnTheSheep(["sheep", "sheep", "wolf"])); // "Oi! Sheep number 1! You are about to be eaten by a wolf
+//-------------------------------------------------------------------------------------------------
