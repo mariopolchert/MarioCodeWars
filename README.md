@@ -1,0 +1,2 @@
+# MarioCodeWars
+Just CodeWars solutions
