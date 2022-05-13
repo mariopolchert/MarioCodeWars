@@ -1081,3 +1081,72 @@
 // console.log(warnTheSheep(["sheep", "wolf", "sheep"])); // "Oi! Sheep number 1! You are about to be eaten by a wolf
 // console.log(warnTheSheep(["sheep", "sheep", "wolf"])); // "Oi! Sheep number 1! You are about to be eaten by a wolf
 //-------------------------------------------------------------------------------------------------
+// function likes(names) {
+//     let s = "";
+//     let i = 0;
+//     switch (names.length) {
+//         case 0:
+//             s = `no one likes this`;
+//             break;
+//         case 1:
+//             s = `${names[i]} likes this`;
+//             break;
+//         case 2:
+//             s = `${names[i]} and ${names[i + 1]} like this`;
+//             break;
+//         case 3:
+//             s = `${names[i]}, ${names[i + 1]} and ${names[i + 2]} like this`;
+//             break;
+//         default:
+//             s = `${names[i]}, ${names[i + 1]} and ${
+//                 names.length - 2
+//             } others like this`;
+//             break;
+//     }
+//     return s;
+// }
+
+// //   []                                -->  "no one likes this"
+// // ["Peter"]                         -->  "Peter likes this"
+// // ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+// // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+// // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+
+// // Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+// console.log(likes([])); // 'no one likes this');
+// console.log(likes(["Peter"])); // 'Peter likes this');
+// console.log(likes(["Jacob", "Alex"])); // 'Jacob and Alex like this');
+// console.log(likes(["Max", "John", "Mark"])); // 'Max, John and Mark like this');
+// console.log(likes(["Alex", "Jacob", "Mark", "Max"])); // 'Alex, Jacob and 2 others like this');
+// ----------------------------------------------------------------------------------------
+// function findOdd(A) {
+//     const o = A.reduce(function (a, c) {
+//         return a[c] ? ++a[c] : (a[c] = 1), a;
+//     }, {});
+//     let odd;
+//     for (const [k, v] of Object.entries(o)) {
+//         if (v % 2 !== 0) odd = k;
+//     }
+//     return odd;
+// }
+
+// // TODO const findOdd = (xs) => xs.reduce((a, b) => a ^ b);      ^ = XOR operation
+// // TODO function findOdd(arr) {
+//   return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+// }
+
+// //   [7] should return 7, because it occurs 1 time (which is odd).
+// //   [0] should return 0, because it occurs 1 time (which is odd).
+// //   [1,1,2] should return 2, because it occurs 1 time (which is odd).
+// //   [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+// //   [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+
+//console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5])); // 5
+// console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])); // -1
+// console.log(findOdd([20, 1, 1, 2, 2, 3, 3, 5, 5, 4, 20, 4, 5])); // 5
+// console.log(findOdd([10])); // 10
+// console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1])); // 10
+// console.log(findOdd([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10])); // 1
+//-----------------------------------------------------------------------------------------------
+
