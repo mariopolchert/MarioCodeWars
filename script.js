@@ -1150,3 +1150,114 @@
 // console.log(findOdd([5, 4, 3, 2, 1, 5, 4, 3, 2, 10, 10])); // 1
 //-----------------------------------------------------------------------------------------------
 
+// function recurse(n) {
+//     if (n < 10) return n;
+//     else return (n % 10) + recurse((n - (n % 10)) / 10);
+// }
+
+// function digital_root(n) {
+//     let result = recurse(n);
+//     while (result > 9) {
+//         result = recurse(result);
+//     }
+//     return result;
+// }
+
+// // TODO function digital_root(n) {
+// //     return ((n - 1) % 9) + 1;
+// // }
+
+// // TODO function digital_root(n) {
+// //     if (n < 10) return n;
+// //     return digital_root(
+// //       n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
+// //   }
+
+// console.log(digital_root(456));
+// console.log(digital_root(132189));
+// console.log(digital_root(493193));
+
+//   Digital root is the recursive sum of all the digits in a number.
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+// console.log(digital_root(16)); // 7
+// console.log(digital_root(456)); // 6
+// -------------------------------------------------------------------------------------------------
+// function spinWords(s) {
+//     return s
+//         .split(" ")
+//         .map((c) => {
+//             return c.length > 4 ? (c = c.split("").reverse().join("")) : c;
+//         })
+//         .join(" ");
+// }
+
+// // TODO function spinWords(string){
+// //     return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
+// //   }
+
+// // Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+
+// console.log(spinWords("Welcome")); // "emocleW"
+// console.log(spinWords("Hey fellow warriors")); // "Hey wollef sroirraw"
+// console.log(spinWords("This is a test")); // "This is a test"
+// console.log(spinWords("This is another test")); // "This is rehtona test"
+// console.log(spinWords("You are almost to the last test")); // "You are tsomla to the last test"
+// console.log(spinWords("Just kidding there is still one more")); // "Just gniddik ereht is llits one more"
+// console.log(spinWords("Seriously this is the last one")); // "ylsuoireS this is the last one"
+//---------------------------------------------------------------------------------------------------------
+// Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+// Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+
+// const countBits = (n) => {
+//     return [...n.toString(2)].filter((n) => n === "1").length;
+// };
+
+// // TODO countBits = n => n.toString(2).split('0').join('').length;
+
+// console.log(countBits(0)); // 0
+// console.log(countBits(4)); // 1
+// console.log(countBits(7)); // 3
+// console.log(countBits(9)); // 2
+// console.log(countBits(10)); // 2
+//-------------------------------------------------------------------------------------------------
+// Count the number of Duplicates
+
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+// "abcde" -> 0 # no characters repeats more than once
+// "aabbcde" -> 2 # 'a' and 'b'
+// "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+// "indivisibility" -> 1 # 'i' occurs six times
+// "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+// "aA11" -> 2 # 'a' and '1'
+// "ABBA" -> 2 # 'A' and 'B' each occur twice
+
+// function duplicateCount(text) {
+//     let obj = {};
+//     for (let char of text.toLowerCase()) {
+//         !obj[char] ? (obj[char] = 1) : obj[char]++;
+//     }
+//     let result = 0;
+//     for (let value of Object.values(obj)) {
+//         if (value > 1) result++;
+//     }
+//     return result;
+// }
+
+// TODO function duplicateCount(text){
+//   return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+// }
+
+// console.log(duplicateCount("")); // 0
+// console.log(duplicateCount("abcde")); // 0
+// console.log(duplicateCount("aabbcde")); // 2
+// console.log(duplicateCount("aabBcde")); // 2,"should ignore case"
+// console.log(duplicateCount("Indivisibility")); // 1
+// console.log(duplicateCount("Indivisibilities")); // 2, "characters may not be adjacent"
+//---------------------------------------------------------------------------------------------------
