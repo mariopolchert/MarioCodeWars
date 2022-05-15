@@ -1261,3 +1261,118 @@
 // console.log(duplicateCount("Indivisibility")); // 1
 // console.log(duplicateCount("Indivisibilities")); // 2, "characters may not be adjacent"
 //---------------------------------------------------------------------------------------------------
+// You are given an array (which will have a length of at least 3, but could be very large) containing integers. The array is either entirely comprised of odd integers or entirely comprised of even integers except for a single integer N. Write a method that takes the array as an argument and returns this "outlier" N.
+// Examples
+
+// [2, 4, 0, 100, 4, 11, 2602, 36]
+// Should return: 11 (the only odd number)
+
+// [160, 3, 1719, 19, 11, 13, -21]
+// Should return: 160 (the only even number)
+
+// function findOutlier(integers) {
+
+// }
+
+// function findOutlier(a) {
+//     let e = 0;
+//     for (let i = 0; i < 3; i++) {
+//         if (a[i] % 2 === 0) e++;
+//     }
+//     let ix = a.findIndex((n) => {
+//         return e > 1 ? n % 2 !== 0 : n % 2 === 0;
+//     });
+//     return a[ix];
+// }
+
+// console.log(findOutlier([0, 1, 2])); // 1
+// console.log(findOutlier([1, 2, 3])); // 2
+// console.log(findOutlier([2, 6, 8, 10, 3])); // 3
+// console.log(findOutlier([0, 0, 3, 0, 0])); // 3
+// console.log(findOutlier([1, 1, 0, 1, 1])); // 0
+// console.log(findOutlier([160, 3, 1719, 19, 11, 13, -21])); // 160
+// console.log(
+//     findOutlier([
+//         -31374703, 165540153, 119220727, 120389379, 183215910, -60331925,
+//         184643203, -179359363, -133725593, 146621797,
+//     ])
+// ); // expected -31374703 to equal 183215910
+// ----------------------------------------------------------------------------------------------
+// Collect|Welcome.
+// In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+// If anything in the text isn't a letter, ignore it and don't return it.
+// "a" = 1, "b" = 2, etc.
+// Example
+// alphabetPosition("The sunset sets at twelve o' clock.")
+// Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+
+// function alphabetPosition(text) {
+//     const small = {
+//         a: "1",
+//         b: "2",
+//         c: "3",
+//         d: "4",
+//         e: "5",
+//         f: "6",
+//         g: "7",
+//         h: "8",
+//         i: "9",
+//         j: "10",
+//         k: "11",
+//         l: "12",
+//         m: "13",
+//         n: "14",
+//         o: "15",
+//         p: "16",
+//         q: "17",
+//         r: "18",
+//         s: "19",
+//         t: "20",
+//         u: "21",
+//         v: "22",
+//         w: "23",
+//         x: "24",
+//         y: "25",
+//         z: "26",
+//     };
+//     let result = "";
+//     for (let letter of text) {
+//         if (/[A-Za-z]/.test(letter))
+//             result += small[letter.toLowerCase()] + " ";
+//     }
+//     return result.trimEnd();
+// }
+// console.log(alphabetPosition("sl8v]wv5"));
+// console.log(alphabetPosition("The sunset sets at twelve o' clock.")); // "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+// console.log(alphabetPosition("The narwhal bacons at midnight.")); // "20 8 5 14 1 18 23 8 1 12 2 1 3 15 14 19 1 20 13 9 4 14 9 7 8 20"
+// -----------------------------------------------------------------------------------------------
+// Collect|
+
+// Write a function, persistence, that takes in a positive parameter num and returns its multiplicative persistence, which is the number of times you must multiply the digits in num until you reach a single digit.
+// For example (Input --> Output):
+
+// 39 --> 3 (because 3*9 = 27, 2*7 = 14, 1*4 = 4 and 4 has only one digit)
+// 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
+// 4 --> 0 (because 4 is already a one-digit number)
+
+// function recurse(n) {
+//     if (n < 10) return n;
+//     return (n % 10) * recurse((n - (n % 10)) / 10);
+// }
+
+// function persistence(n) {
+//     if (n < 10) return 0;
+//     let counter = 1;
+//     let result = recurse(n);
+//     while (result > 9) {
+//         result = recurse(result);
+//         counter++;
+//     }
+//     return counter;
+// }
+
+// console.log(persistence(39)); //3
+// console.log(persistence(4)); //0
+// console.log(persistence(25)); //2
+// console.log(persistence(999)); //4
+// ----------------------------------------------------------------------------------------------------------------------
