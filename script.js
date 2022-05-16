@@ -1376,3 +1376,65 @@
 // console.log(persistence(25)); //2
 // console.log(persistence(999)); //4
 // ----------------------------------------------------------------------------------------------------------------------
+// Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).
+// Examples
+
+// "the-stealth-warrior" gets converted to "theStealthWarrior"
+// "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+// function toCamelCase(str) {
+//     let result = "";
+//     let temp = 0;
+//     for (let i = 0; i < str.length; i++) {
+//         if (/[_-]/gi.test(str[i])) {
+//             result += "";
+//             temp = i;
+//         } else if (temp !== 0) {
+//             result += str[i].toUpperCase();
+//             temp = 0;
+//         } else result += str[i];
+//     }
+//     return result;
+// }
+
+// // TODO function toCamelCase(str){
+// //   return str.replace(/[-_](.)/g, (_, c) => c.toUpperCase());
+// // }
+
+// console.log(toCamelCase("")); // '', "An empty string was provided but not returned")
+// console.log(toCamelCase("the_stealth_warrior")); // "theStealthWarrior", "toCamelCase('the_stealth_warrior') did not return correct value")
+// console.log(toCamelCase("The-Stealth-Warrior")); // "TheStealthWarrior", "toCamelCase('The-Stealth-Warrior') did not return correct value")
+// console.log(toCamelCase("A-B-C")); // "ABC", "toCamelCase('A-B-C') did not return correct value")
+// -----------------------------------------------------------------------------------------------------------------------
+
+// Collect|
+// Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
+
+// function order(w) {
+//     let a = w.split(" ");
+//     let o = {};
+//     a.forEach((e) => {
+//         o[e.match(/[1-9]/g)] = e;
+//     });
+//     let r = "";
+//     for (let v of Object.values(o)) r += `${v} `;
+//     return r.trim();
+// }
+
+// // TODO function order(words){
+
+// //   return words.split(' ').sort(function(a, b){
+// //     return a.match(/\d/) - b.match(/\d/);
+// //  }).join(' ');
+// // }
+
+// console.log(order("is2 Thi1s T4est 3a")); // "Thi1s is2 3a T4est"
+// console.log(order("4of Fo1r pe6ople g3ood th5e the2")); // "Fo1r the2 g3ood 4of th5e pe6ople"
+// console.log(order("")); // "", "empty input should return empty string"
+//-------------------------------------------------------------------------------------------------
