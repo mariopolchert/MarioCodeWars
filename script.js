@@ -1438,3 +1438,116 @@
 // console.log(order("4of Fo1r pe6ople g3ood th5e the2")); // "Fo1r the2 g3ood 4of th5e pe6ople"
 // console.log(order("")); // "", "empty input should return empty string"
 //-------------------------------------------------------------------------------------------------
+// function tribonacci(s, n) {
+//     let i = 0;
+//     while (s.length < n) {
+//         s.push(s[i] + s[i + 1] + s[i + 2]);
+//         i++;
+//     }
+//     return s.slice(0, n);
+// }
+
+// // console.log(tribonacci([1, 1, 1], 10)); //[1,1,1,3,5,9,17,31,57,105]
+// // console.log(tribonacci([0, 0, 1], 10)); //[0,0,1,1,2,4,7,13,24,44]
+// // console.log(tribonacci([0, 1, 1], 10)); //[0,1,1,2,4,7,13,24,44,81]
+// // console.log(tribonacci([1, 0, 0], 10)); //[1,0,0,1,1,2,4,7,13,24]
+// // console.log(tribonacci([0, 0, 0], 10)); //[0,0,0,0,0,0,0,0,0,0]
+// // console.log(tribonacci([1, 2, 3], 10)); //[1,2,3,6,11,20,37,68,125,230]
+// // console.log(tribonacci([3, 2, 1], 10)); //[3,2,1,6,9,16,31,56,103,190]
+// console.log(tribonacci([1, 1, 1], 1)); //[1]
+// console.log(tribonacci([300, 200, 100], 0)); //[]
+// console.log(tribonacci([0.5, 0.5, 0.5], 30)); //[0.5,0.5,0.5,1.5,2.5,4.5,8.5,15.5,28.5,52.5,96.5,177.5,326.5,600.5,1104.5,2031.5,3736.5,6872.5,12640.5,23249.5,42762.5,78652.5,144664.5,266079.5,489396.5,900140.5,1655616.5,3045153.5,5600910.5,10301680.5]
+//-------------------------------------------------------------------------------------------------
+// function Xbonacci(s, n) {
+//     let j = 0;
+//     let r = 0;
+//     while (s.length < n) {
+//         for (let i = 0 + j; i < s.length; i++) {
+//             r += s[i];
+//         }
+//         s.push(r);
+//         r = 0;
+//         j++;
+//     }
+//     return s.slice(0, n);
+// }
+
+// console.log(Xbonacci([0, 1], 10)); //[0,1,1,2,3,5,8,13,21,34]
+// console.log(Xbonacci([1, 1], 10)); //[1,1,2,3,5,8,13,21,34,55]
+// console.log(Xbonacci([0, 0, 0, 0, 1], 10)); //[0,0,0,0,1,1,2,4,8,16]
+// console.log(Xbonacci([1, 0, 0, 0, 0, 0, 1], 10)); //[1,0,0,0,0,0,1,2,3,6]
+// console.log(Xbonacci([1, 0, 0, 0, 0, 0, 0, 0, 0, 0], 20)); //[1,0,0,0,0,0,0,0,0,0,1,1,2,4,8,16,32,64,128,256]
+
+// xbonacci {1,1,1,1} 10 = {1,1,1,1,4,7,13,25,49,94}
+// xbonacci {0,0,0,0,1} 10 = {0,0,0,0,1,1,2,4,8,16}
+// xbonacci {1,0,0,0,0,0,1} 10 = {1,0,0,0,0,0,1,2,3,6}
+// xbonacci {1,1} produces the Fibonacci sequence
+//--------------------------------------------------------------------------------------------------
+// function isPangram(s) {
+//     const alphabet = [
+//         "a",
+//         "b",
+//         "c",
+//         "d",
+//         "e",
+//         "f",
+//         "g",
+//         "h",
+//         "i",
+//         "j",
+//         "k",
+//         "l",
+//         "m",
+//         "n",
+//         "o",
+//         "p",
+//         "q",
+//         "r",
+//         "s",
+//         "t",
+//         "u",
+//         "v",
+//         "w",
+//         "x",
+//         "y",
+//         "z",
+//     ];
+//     return alphabet.every((i) => s.toLowerCase().includes(i));
+// }
+
+// console.log(isPangram("The quick brown fox jumps over the lazy dog."));
+// console.log(isPangram("This is not a pangram."));
+// // "The quick brown fox jumps over the lazy dog." true
+// // "This is not a pangram." false
+//------------------------------------------------------------------------------------------
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+// Examples
+// pigIt('Pig latin is cool'); // igPay atinlay siay oolcay
+// pigIt('Hello world !');     // elloHay orldway !
+
+// function pigIt(str) {
+//     let r = "";
+//     str = str.split(" ").forEach((i) => {
+//         r += /\w/.test(i) ? i.slice(1) + i[0] + "ay " : i;
+//     });
+//     return r.trim();
+// }
+
+// function pigIt(str){
+//     return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
+//   }
+
+
+// // function pigIt(str) {
+// //     str = str.split(" ");
+// //     let result = "";
+// //     str.forEach((item) => {
+// //         result += /\w/.test(item) ? item.slice(1) + item[0] + "ay " : item;
+// //     });
+// //     return result.trim();
+// //}
+
+// console.log(pigIt("Pig latin is cool")); // "igPay atinlay siay oolcay"
+// console.log(pigIt("This is my string")); // "hisTay siay ymay tringsay"
+// console.log(pigIt("Hello world !")); // "hisTay siay ymay tringsay"
+//------------------------------------------------------------------------------------------------------
