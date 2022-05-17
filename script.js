@@ -1533,10 +1533,9 @@
 //     return r.trim();
 // }
 
-// function pigIt(str){
+// TODO function pigIt(str){
 //     return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
 //   }
-
 
 // // function pigIt(str) {
 // //     str = str.split(" ");
