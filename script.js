@@ -1550,3 +1550,16 @@
 // console.log(pigIt("This is my string")); // "hisTay siay ymay tringsay"
 // console.log(pigIt("Hello world !")); // "hisTay siay ymay tringsay"
 //------------------------------------------------------------------------------------------------------
+
+// function isPrime(num) {
+//     let div = [13, 11, 7, 5, 3, 2];
+//     if (div.includes(num)) return true;
+//     else if (num === 1 || num < 1) return false;
+//     else if (div.some((item) => num % item === 0)) return false;
+//     for (let i = 3, r = Math.sqrt(num); i <= r; i += 2) {
+//         if (num % i === 0) return false;
+//     }
+//     return true;
+// }
+//------------------------------------------------------------------------------------------------------
+
