@@ -1562,4 +1562,177 @@
 //     return true;
 // }
 //------------------------------------------------------------------------------------------------------
+// Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.
+// For example:
+// uniqueInOrder('AAAABBBCCDAABBB') == ['A', 'B', 'C', 'D', 'A', 'B']
+// uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
+// uniqueInOrder([1,2,2,3,3])       == [1,2,3]
 
+// var uniqueInOrder = function (iterable) {
+//     let result = [];
+//     for (let i in iterable) {
+//         if (iterable[i] === result[result.length - 1]) result.push();
+//         else result.push(iterable[i]);
+//     }
+//     return result;
+// };
+
+// // TODO var uniqueInOrder=function(iterable){
+// //     return [...iterable].filter((a, i) => a !== iterable[i-1])
+// // }
+
+// console.log(uniqueInOrder("AAAABBBCCDAABBB")); // ['A','B','C','D','A','B'])
+// console.log(uniqueInOrder("AAAABBBCCDAABBB")); // ['A', 'B', 'C', 'D', 'A', 'B']
+// console.log(uniqueInOrder("ABBCcAD")); // ['A', 'B', 'C', 'c', 'A', 'D']
+// console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1,2,3]
+//--------------------------------------------------------------------------------------------------------
+// A Narcissistic Number is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
+// For example, take 153 (3 digits), which is narcisstic:
+//     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
+// and 1652 (4 digits), which isn't:
+//     1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
+
+// const narcissistic = (v) =>
+//     v ===
+//     Array.from(v.toString()).reduce((a, c, _, arr) => a + c ** arr.length, 0);
+
+// // function narcissistic(value) {
+// //     const number = value.toString().length;
+// //     const arr = Array.from(value.toString());
+// //     const result = arr.reduce(
+// //         (acc, curr, index, array) => acc + curr ** array.length,
+// //         0
+// //     );
+// //     return result;
+// // }
+
+// console.log(narcissistic(7)); // true, "7 is narcissistic"
+// console.log(narcissistic(371)); // true, "371 is narcissistic"
+// console.log(narcissistic(153)); // true,    153
+// console.log(narcissistic(1652)); // false,  1938
+//-----------------------------------------------------------------------------------------------------------
+
+// function validSolution(b) {
+//     // firstCondition
+//     let firstCondition = b.every((l) =>
+//         l.every((n) => n !== 0 && [1, 2, 3, 4, 5, 6, 7, 8, 9].includes(n))
+//     );
+//     // secondCondition
+//     let obj = {};
+//     for (let line of b) {
+//         for (let i = 0; i < 9; i++) {
+//             obj[i] ? obj[i].push(line[i]) : (obj[i] = [line[i]]);
+//         }
+//     }
+//     let v = Object.values(obj);
+//     let secondCondition = v.every((l) =>
+//         l.every((n) => n !== 0 && [1, 2, 3, 4, 5, 6, 7, 8, 9].includes(n))
+//     );
+//     // third condition
+//     let obj3 = {};
+//     let counter = 3;
+//     for (let line of b) {
+//         for (let i = 0; i < 3; i++) {
+//             obj3[i]
+//                 ? obj[i].push(line.splice(0, 3))
+//                 : (obj3[i] = [...line.splice(0, 3)]);
+//             // console.log(line.splice(0, 3));
+//         }
+//         console.log(line);
+//     }
+
+//     console.log(obj3);
+//     // console.log(b);
+//     // final result
+//     return firstCondition && secondCondition;
+// }
+
+// console.log(
+//     validSolution([
+//         [1, 2, 3, 4, 5, 6, 7, 8, 9],
+//         [2, 3, 1, 5, 6, 4, 8, 9, 7],
+//         [3, 1, 2, 6, 4, 5, 9, 7, 8],
+//         [4, 5, 6, 7, 8, 9, 1, 2, 3],
+//         [5, 6, 4, 8, 9, 7, 2, 3, 1],
+//         [6, 4, 5, 9, 7, 8, 3, 1, 2],
+//         [7, 8, 9, 1, 2, 3, 4, 5, 6],
+//         [8, 9, 7, 2, 3, 1, 5, 6, 4],
+//         [9, 7, 8, 3, 1, 2, 6, 4, 5],
+//     ])
+// ); // false
+
+//expected true to equal false
+
+// console.log(
+//     validSolution([
+//         [5, 3, 4, 6, 7, 8, 9, 1, 2],
+//         [6, 7, 2, 1, 9, 5, 3, 4, 8],
+//         [1, 9, 8, 3, 4, 2, 5, 6, 7],
+//         [8, 5, 9, 7, 6, 1, 4, 2, 3],
+//         [4, 2, 6, 8, 5, 3, 7, 9, 1],
+//         [7, 1, 3, 9, 2, 4, 8, 5, 6],
+//         [9, 6, 1, 5, 3, 7, 2, 8, 4],
+//         [2, 8, 7, 4, 1, 9, 6, 3, 5],
+//         [3, 4, 5, 2, 8, 6, 1, 7, 9],
+//     ])
+// ); //   true
+
+// console.log(
+//     validSolution([
+//         [5, 3, 4, 6, 7, 8, 9, 1, 2],
+//         [6, 7, 2, 1, 9, 0, 3, 4, 8],
+//         [1, 0, 0, 3, 4, 2, 5, 6, 0],
+//         [8, 5, 9, 7, 6, 1, 0, 2, 0],
+//         [4, 2, 6, 8, 5, 3, 7, 9, 1],
+//         [7, 1, 3, 9, 2, 4, 8, 5, 6],
+//         [9, 0, 1, 5, 3, 7, 2, 1, 4],
+//         [2, 8, 7, 4, 1, 9, 6, 3, 5],
+//         [3, 0, 0, 4, 8, 1, 1, 7, 9],
+//     ])
+// ); //    false
+
+// function validSolution(b) {
+//     return b.every((l) =>
+//         l.every((n) => n !== 0 && [1, 2, 3, 4, 5, 6, 7, 8, 9].includes(n))
+//     );
+// }
+
+// const a = [5, 3, 4, 6, 7, 8, 9, 1, 2];
+// const sl = a.slice(3);
+// console.log(a);
+// const sl2 = a.slice(3);
+// console.log(a);
+// console.log(sl);
+// console.log(sl2);
+
+//---------------------------------------------------------------------------------------------------
+
+// digPow(89, 1) should return 1 since 8¹ + 9² = 89 = 89 * 1
+// digPow(92, 1) should return -1 since there is no k such as 9¹ + 2² equals 92 * k
+// digPow(695, 2) should return 2 since 6² + 9³ + 5⁴= 1390 = 695 * 2
+// digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
+
+// const digPow = (n, p) => {
+//     const r = Array.from(n.toString()).reduce((a, c, i) => a + c ** (p + i), 0);
+//     return r % n === 0 ? r / n : -1;
+// };
+
+// console.log(digPow(89, 1)); // 1
+// console.log(digPow(92, 1)); // -1
+// console.log(digPow(695, 2)); // 2
+// console.log(digPow(46288, 3)); // 51
+//---------------------------------------------------------------------------------------------------------
+// function findEvenIndex(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         let l = arr.slice(0, i).reduce((a, c) => a + c, 0);
+//         let r = arr.slice(i + 1, arr.length).reduce((a, c) => a + c, 0);
+//         if (l === r) return i;
+//     }
+//     return -1;
+// }
+
+// console.log(findEvenIndex([1, 2, 3, 4, 3, 2, 1])); //3, "The array was: [1,2,3,4,3,2,1]
+// console.log(findEvenIndex([1, 100, 50, -51, 1, 1])); //1, "The array was: [1,100,50,-51,1,1]
+// console.log(findEvenIndex([1, 2, 3, 4, 5, 6])); //-1, "The array was: [1,2,3,4,5,6]
+// console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35])); //3, "The array was: [20,10,30,10,10,15,35]
+//---------------------------------------------------------------------------------------------------------
