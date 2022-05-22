@@ -1736,3 +1736,29 @@
 // console.log(findEvenIndex([1, 2, 3, 4, 5, 6])); //-1, "The array was: [1,2,3,4,5,6]
 // console.log(findEvenIndex([20, 10, 30, 10, 10, 15, 35])); //3, "The array was: [20,10,30,10,10,15,35]
 //---------------------------------------------------------------------------------------------------------
+// You will be given an array of numbers. You have to sort the odd numbers in ascending order while leaving the even numbers at their original positions.
+// Examples
+// [7, 1]  =>  [1, 7]
+// [5, 8, 6, 3, 4]  =>  [3, 8, 6, 5, 4]
+// [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]  =>  [1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+// function sortArray(array) {
+//     let odds = [];
+//     return array
+//         .map((n) => {
+//             if (n % 2 === 0) return n;
+//             else {
+//                 odds.push(n);
+//                 return "x";
+//             }
+//         })
+//         .map((n) => {
+//             odds.sort((a, b) => a - b);
+//             return n === "x" ? (n = odds.shift()) : n;
+//         });
+// }
+
+// console.log(sortArray([5, 3, 2, 8, 1, 4])); // [1, 3, 2, 8, 5, 4]
+// console.log(sortArray([5, 3, 1, 8, 0])); // [1, 3, 5, 8, 0]
+// console.log(sortArray([])); // []
+//--------------------------------------------------------------------------------------------------------
