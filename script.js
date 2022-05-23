@@ -1762,3 +1762,51 @@
 // console.log(sortArray([5, 3, 1, 8, 0])); // [1, 3, 5, 8, 0]
 // console.log(sortArray([])); // []
 //--------------------------------------------------------------------------------------------------------
+
+// const getCount = (str) =>
+//     str.split("").filter((l) => ["a", "e", "i", "o", "u"].includes(l)).length;
+
+// console.log(getCount("abracadabra")); // 5
+
+// TODO function getCount(str) {
+//     return (str.match(/[aeiou]/ig)||[]).length;
+//   }
+
+//----------------------------------------------------------------------------------------------------------
+// Square every digit
+// Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+// Note: The function accepts an integer and returns an integer
+
+// const squareDigits = (num) =>
+//     Number(
+//         num
+//             .toString()
+//             .split("")
+//             .map((n) => (+n) ** 2)
+//             .join("")
+//     );
+
+// console.log(squareDigits(3212)); //  9414
+// console.log(squareDigits(2112)); //  4114
+// console.log(squareDigits(0)); // 0
+//-----------------------------------------------------------------------------------------------------------
+// Highest and lowest
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+// Example
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+// Notes
+//     All numbers are valid Int32, no need to validate them.
+//     There will always be at least one number in the input string.
+//     Output string must be two numbers separated by a single space, and highest number is first.
+
+// function highAndLow(numbers) {
+//     const result = numbers.split(" ").map((n) => Number(n));
+//     return `${Math.max(...result)} ${Math.min(...result)}`;
+// }
+
+// console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // "42 -9"
+// console.log(highAndLow("1 2 3")); // "3 1"
+//---------------------------------------------------------------------------------------------------------
