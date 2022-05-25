@@ -1834,3 +1834,39 @@
 
 // console.log(rot13("Test!")); // Output: Grfg
 //----------------------------------------------------------------------------------------------------------
+// Maximum subarray sum
+
+// maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])
+// should be 6: [4, -1, 2, 1]
+
+// var maxSequence = function (arr) {
+//     let sums = [];
+//     let max = 0;
+//     let tempSum = 0;
+//     for (let i in arr) {
+//         if (arr[i] > 0) {
+//             for (let j = i; j < arr.length; j++) {
+//                 sums.length
+//                     ? sums.push(sums[sums.length - 1] + arr[j])
+//                     : sums.push(arr[j]);
+//             }
+//             tempSum = Math.max.apply(null, sums);
+//             if (tempSum > max) max = tempSum;
+//             sums = [];
+//         }
+//     }
+//     return max;
+// };
+
+// TODO var maxSequence = function(arr){
+//     var min = 0, ans = 0, i, sum = 0;
+//     for (i = 0; i < arr.length; ++i) {
+//       sum += arr[i];
+//       min = Math.min(sum, min);
+//       ans = Math.max(ans, sum - min);
+//     }
+//     return ans;
+//   }
+
+// console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])); //  6
+// -----------------------------------------------------------------------------------------------------------
