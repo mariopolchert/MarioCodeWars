@@ -1870,3 +1870,67 @@
 
 // console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4])); //  6
 // -----------------------------------------------------------------------------------------------------------
+// Pete the baker 5kyu
+// Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
+// Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
+// Examples:
+// // must return 2
+// cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200});
+// // must return 0
+// cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000});
+
+// function cakes(recipe, available) {
+//     let max = 0;
+//     let temp = 0;
+//     for (let [key, value] of Object.entries(recipe)) {
+//         if (available[key] / value >= 0) {
+//             temp = Math.trunc(available[key] / value);
+//             if (temp <= 0) return 0;
+//             if (max === 0 || max > temp) max = temp;
+//             temp = 0;
+//         } else if (max === 0) return 0;
+//         else return 0;
+//     }
+//     return max;
+// }
+// // TODO function cakes(recipe, available) {
+// //     return Object.keys(recipe).reduce(function(val, ingredient) {
+// //       return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+// //     }, Infinity)
+// //   }
+
+// console.log(
+//     cakes(
+//         { flour: 500, sugar: 200, eggs: 1 },
+//         { flour: 1200, sugar: 1200, eggs: 5, milk: 200 }
+//     )
+// ); // 2
+
+// console.log(
+//     cakes(
+//         { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 },
+//         { sugar: 500, flour: 2000, milk: 2000 }
+//     )
+// ); // 0
+//-------------------------------------------------------------------------------------------------------
+// 5 kyu   Moving Zeros To The End
+// Write an algorithm that takes an array and moves all of the zeros to the end, preserving the order of the other elements.
+
+// function moveZeros(arr) {
+//     for (let n of arr) {
+//         if (n === 0) {
+//             arr.splice(arr.indexOf(n), 1);
+//             arr.push(0);
+//         }
+//     }
+//     return arr;
+// }
+
+// TODO var moveZeros = function (arr) {
+//     return arr.filter(function(x) {return x !== 0}).concat(arr.filter(function(x) {return x === 0;}));
+//   }
+
+// console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1])); // [1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // [false,1,1,2,1,3,"a",0,0]
+//----------------------------------------------------------------------------------------------------------
+
