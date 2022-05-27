@@ -1933,4 +1933,40 @@
 // console.log(moveZeros([1, 2, 0, 1, 0, 1, 0, 3, 0, 1])); // [1, 2, 1, 1, 3, 1, 0, 0, 0, 0]
 // console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // [false,1,1,2,1,3,"a",0,0]
 //----------------------------------------------------------------------------------------------------------
+// 5 kyu   RGB To Hex Conversion
+// The rgb function is incomplete. Complete it so that passing in RGB decimal values will result in a hexadecimal representation being returned. Valid decimal values for RGB are 0 - 255. Any values that fall out of that range must be rounded to the closest valid value.
+// Note: Your answer should always be 6 characters long, the shorthand with 3 will not work here.
+// The following are examples of expected output values:
 
+// rgb(255, 255, 255); // returns FFFFFF
+// rgb(255, 255, 300); // returns FFFFFF
+// rgb(0, 0, 0); // returns 000000
+// rgb(148, 0, 211); // returns 9400D3
+// const rgb = (r, g, b) => {
+//     const arr = [r, g, b];
+//     let result = [];
+//     arr.map((n) => {
+//         if (n < 0) result.push(0);
+//         else if (n > 255) result.push(255);
+//         else result.push(n);
+//     });
+//     result = result
+//         .map((n) => n.toString(16).toUpperCase())
+//         .map((n) => (n.length < 2 ? 0 + n : n))
+//         .join("");
+//     return result;
+// };
+
+// console.log(rgb(4, 156, 268)); // '049CFF'
+// console.log(rgb(148, 11, 225)); // '940BE1'
+// console.log(rgb(0, 0, 0)); // '000000'
+// console.log(rgb(0, 0, -20)); // '000000'
+// console.log(rgb(300, 255, 255)); // 'FFFFFF'
+// console.log(rgb(173, 255, 47)); // 'ADFF2F'
+// console.log((255).toString(16));
+//---------------------------------------------------------------------------------------------------------
+// 8 kyu  Even or Odd
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+// const even_or_odd = (number) => number % 2 === 0 ? "Even" : "Odd";
+//------------------------------------------------------------------------------------------------------------
