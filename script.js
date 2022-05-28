@@ -1970,3 +1970,48 @@
 
 // const even_or_odd = (number) => number % 2 === 0 ? "Even" : "Odd";
 //------------------------------------------------------------------------------------------------------------
+// 8 kyu  Opposite number
+// Very simple, given an integer or a floating-point number, find its opposite.
+// Examples:
+// 1: -1
+// 14: -14
+// -34: 34
+
+// function opposite(number) {
+//     return number > 0 ? -number : Math.abs(number);
+// }
+
+// TODO const opposite = (n) => -n;
+
+// console.log(opposite(-1));
+// //------------------------------------------------------------------------------------------------------------
+// 8 kyu  Convert a Number to a String!
+// We need a function that can transform a number into a string.
+// What ways of achieving this do you know?
+// Examples:
+// 123 --> "123"
+// 999 --> "999"
+
+// const numberToString = (num) => num.toString();
+
+// console.log(numberToString(123));
+//------------------------------------------------------------------------------------------------------------
+// 8 kyu   Convert boolean values to strings 'Yes' or 'No'.
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+// const boolToWord = (bool) => (bool ? "Yes" : "No");
+
+// console.log(boolToWord(true));
+// console.log(boolToWord(false));
+//----------------------------------------------------------------------------------------------------------
+// 8 kyu Reversed Strings
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+// const solution = (str) => str.split("").reverse().join("");
+// console.log(solution("world")); // 'dlrow'
+// console.log(solution("hello")); // 'olleh'
+// console.log(solution("")); // ''
+// console.log(solution("h")); // 'h'
+//-------------------------------------------------------------------------------------------------------------
