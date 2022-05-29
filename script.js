@@ -2015,3 +2015,87 @@
 // console.log(solution("")); // ''
 // console.log(solution("h")); // 'h'
 //-------------------------------------------------------------------------------------------------------------
+// 8 kyu  Return Negative
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+// makeNegative(1);    // return -1
+// makeNegative(-5);   // return -5
+// makeNegative(0);    // return 0
+// makeNegative(0.12); // return -0.12
+//     The number can be negative already, in which case no change is required.
+// Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+// function makeNegative(n) {
+//     return n > 0 ? -n : n;
+// }
+
+// console.log(makeNegative(0)); // -42
+//--------------------------------------------------------------------------------------------------------------
+// 8 kyu   Sum of positive
+// You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+// const positiveSum = (arr) =>
+//     arr.reduce((a, c) => (a > 0 ? a : 0) + (c > 0 ? c : 0), 0);
+
+// console.log(positiveSum([1, 2, 3, 4, 5])); //15
+// console.log(positiveSum([1, -2, 3, 4, 5])); //13
+// console.log(positiveSum([])); //0
+// console.log(positiveSum([-1, -2, -3, -4, -5])); //0
+// console.log(positiveSum([-1, 2, 3, 4, -5])); //9
+//------------------------------------------------------------------------------------------------------------
+// 8 kyu   String repeat
+// Write a function called repeatStr which repeats the given string string exactly n times.
+// repeatStr(6, "I") // "IIIIII"
+// repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+// function repeatStr(n, s) {
+//     return s.repeat(n);
+// }
+
+// console.log(repeatStr(3, "*")); // "***"
+// console.log(repeatStr(5, "#")); // "#####"
+// console.log(repeatStr(2, "ha ")); // "ha ha "
+//------------------------------------------------------------------------------------------------------------
+// 8 kyu  Remove First and Last Character
+// It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+
+// const removeChar = (s) => s.slice(1, -1);
+
+// console.log(removeChar("eloquent")); // 'loquen'
+// console.log(removeChar("country")); // 'ountr'
+// console.log(removeChar("person")); // 'erso'
+// console.log(removeChar("place")); // 'lac'
+// console.log(removeChar("ooopsss")); // 'oopss'
+//------------------------------------------------------------------------------------------------------------
+// 8 kyu   Find the smallest integer in the array
+// Given an array of integers your solution should find the smallest integer.
+//     Given [34, 15, 88, 2] your solution will return 2
+//     Given [34, -345, -1, 100] your solution will return -345
+// You can assume, for the purpose of this kata, that the supplied array will not be empty.
+//
+
+// function findSmallestInt(args) {
+//     return Math.min(...args);
+// }
+
+// console.log(findSmallestInt([78, 56, 232, 12, 8])); //  8,'Should return the smallest int 8'
+// console.log(findSmallestInt([78, 56, 232, 12, 18])); //  12,'Should return the smallest int 12'
+// console.log(findSmallestInt([78, 56, 232, 412, 228])); //  56,'Should return the smallest int 56'
+// console.log(findSmallestInt([78, 56, 232, 12, 0])); //  0,'Should return the smallest int 0'
+// console.log(findSmallestInt([1, 56, 232, 12, 8])); //  1,'Should return the smallest int 1'
+//-------------------------------------------------------------------------------------------------------------
+// 4 kyu   Sum Strings as Numbers
+// Given the string representations of two integers, return the string representation of the sum of those integers.
+// sumStrings('1','2') // => '3'
+// A string representation of an integer will contain no characters besides the ten numerals "0" to "9".
+
+// function sumStrings(a, b) {
+//     // return (BigInt(parseInt(a)) + BigInt(parseInt(b))).toString();
+//     return (BigInt(a.toString()) + BigInt(b.toString())).toString();
+// }
+
+// console.log(sumStrings("123", "456")); // '579'
+// console.log(
+//     sumStrings("712569312664357328695151392", "8100824045303269669937")
+// ); // expected '7.125774134884027e+26' to equal '712577413488402631964821329'
+//--------------------------------------------------------------------------------------------------------------
