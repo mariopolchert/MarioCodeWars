@@ -2099,3 +2099,134 @@
 //     sumStrings("712569312664357328695151392", "8100824045303269669937")
 // ); // expected '7.125774134884027e+26' to equal '712577413488402631964821329'
 //--------------------------------------------------------------------------------------------------------------
+// 8 kyu  Abbreviate a Two Word Name
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+// It should look like this:
+// Sam Harris => S.H
+// patrick feeney => P.F
+
+// const abbrevName = (name) =>
+//     name
+//         .split(" ")
+//         .map((n) => n[0].toUpperCase())
+//         .join(".");
+// console.log(abbrevName("Sam Harris")); // "S.H"
+// console.log(abbrevName("Patrick Feenan")); // "P.F"
+// console.log(abbrevName("Evan Cole")); // "E.C"
+// console.log(abbrevName("p favuzzi")); // "P.F"
+// console.log(abbrevName("David Mendieta")); // "D.M"
+//------------------------------------------------------------------------------------------------------------------
+// 8 kyu   Convert a Boolean to a String
+// Implement a function which convert the given boolean value into its string representation.
+// Note: Only valid inputs will be given.
+
+// const booleanToString = (b) => b.toString();
+
+// console.log(booleanToString(true)); // "true", 'When we pass in true, we want the string "true" as output');
+// console.log(booleanToString(false)); // "false", 'When we pass in false, we want the string "false" as output');
+//------------------------------------------------------------------------------------------------------------------
+// 8 kyu   Beginner - Lost Without a Map
+// Given an array of integers, return a new array with each value doubled.
+// For example:
+// [1, 2, 3] --> [2, 4, 6]
+
+// const maps = (x) => x.map((x) => x + x);
+
+// console.log(maps([1, 2, 3])); // [2, 4, 6]
+// console.log(maps([4, 1, 1, 1, 4])); // [8, 2, 2, 2, 8]
+// console.log(maps([2, 2, 2, 2, 2, 2])); // [4, 4, 4, 4, 4, 4]
+//----------------------------------------------------------------------------------------------------------------
+// 8 kyu   A Needle in the Haystack
+// Can you find the needle in the haystack?
+// Write a function findNeedle() that takes an array full of junk but containing one "needle"
+// After your function finds the needle it should return a message (as a string) that says:
+// "found the needle at position " plus the index it found the needle, so:
+// findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+// should return "found the needle at position 5" (in COBOL "found the needle at position 6")
+
+// function findNeedle(h) {
+//     let n = h.findIndex((w) => w === "needle");
+//     return n !== -1
+//         ? `found the needle at position ${n}`
+//         : "Your function didn't return anything";
+// }
+
+// console.log(
+//     findNeedle(["hay", "junk", "hay", "hay", "moreJunk", "randomJunk"])
+// undefined, "Your function didn't return anything"
+// console.log(findNeedle(haystack_1)); // undefined, "Your function didn't return anything"
+//---------------------------------------------------------------------------------------------------------------
+// 8 kyu  Is n divisible by x and y?
+// Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
+// 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+// 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+// 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+// 4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+
+// const isDivisible = (n, x, y) => n % x === 0 && n % y === 0;
+
+// console.log(isDivisible(3, 3, 4)); //false
+// console.log(isDivisible(12, 3, 4)); //true
+// console.log(isDivisible(8, 3, 4)); //false
+// console.log(isDivisible(48, 3, 4)); //true
+//--------------------------------------------------------------------------------------------------------------
+// 7 kyu  Get the Middle Character
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+// Kata.getMiddle("test") should return "es"
+// Kata.getMiddle("testing") should return "t"
+// Kata.getMiddle("middle") should return "dd"
+// Kata.getMiddle("A") should return "A"
+// #Input
+// A word (string) of length 0 < str < 1000 (In javascript you may get slightly more than 1000 in some test cases due to an error in the test cases). You do not need to test for this. This is only here to tell you that you do not need to worry about your solution timing out.
+// #Output
+// The middle character(s) of the word represented as a string.
+
+// function getMiddle(s) {
+//     return s.length % 2 === 0
+//         ? s.slice(s.length / 2 - 1, s.length / 2 + 1)
+//         : s.slice(Math.floor(s.length / 2), Math.floor(s.length / 2) + 1);
+// }
+
+// console.log(getMiddle("test")); //"es"
+// console.log(getMiddle("testing")); //"t"
+// console.log(getMiddle("middle")); //"dd"
+// console.log(getMiddle("A")); //"A"
+//----------------------------------------------------------------------------------------------------------------
+// 7 kyu  You're a square!
+// A square of squares
+// You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
+// However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+// Task
+// Given an integral number, determine if it's a square number:
+//     In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+// const isSquare = (n) => Number.isInteger(n ** 0.5);
+
+// console.log(isSquare(-1)); // false, "-1: Negative numbers cannot be square numbers"
+// console.log(isSquare(0)); // true, "0 is a square number (0 * 0)"
+// console.log(isSquare(3)); // false, "3 is not a square number"
+// console.log(isSquare(4)); // true, "4 is a square number (2 * 2)"
+// console.log(isSquare(25)); // true, "25 is a square number (5 * 5)"
+// console.log(isSquare(26)); // false, "26 is not a square number"
+//-------------------------------------------------------------------------------------------------------
+// 7 kyu  List Filtering
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+// filter_list([1,2,'a','b']) == [1,2]
+// filter_list([1,'a','b',0,15]) == [1,0,15]
+// filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+// const filter_list = (l) => l.filter((l) => Number.isInteger(l));
+
+// console.log(filter_list([1, 2, "a", "b"])); // [1, 2]
+// console.log(filter_list([1, "a", "b", 0, 15])); // [1, 0, 15])
+// console.log(filter_list([1, 2, "aasf", "1", "123", 123])); // [1, 2, 123])
+//-------------------------------------------------------------------------------------------------------
