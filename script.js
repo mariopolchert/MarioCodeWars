@@ -2230,3 +2230,48 @@
 // console.log(filter_list([1, "a", "b", 0, 15])); // [1, 0, 15])
 // console.log(filter_list([1, 2, "aasf", "1", "123", 123])); // [1, 2, 123])
 //-------------------------------------------------------------------------------------------------------
+// 7 kyu  Exes and Ohs
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+
+// function XO(str) {
+//     str = str.toLowerCase().split("");
+//     return (
+//         str.filter((x) => x === "x").length ===
+//         str.filter((o) => o === "o").length
+//     );
+// }
+
+// console.log(XO("xo")); // true
+// console.log(XO("xxOo")); // true
+// console.log(XO("xxxm")); // false
+// console.log(XO("Oo")); // false
+// console.log(XO("ooom")); // false
+//--------------------------------------------------------------------------------------------------------
+// 7 kyu Isograms
+// An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+// "Dermatoglyphics" --> true
+// "aba" --> false
+// "moOse" --> false (ignore letter case)
+
+// function isIsogram(str) {
+//     let result = {};
+//     str = str.toLowerCase().split("");
+//     str.forEach((s) => {
+//         if (!result[s]) result[s] = 1;
+//         else result[s] += 1;
+//     });
+//     return !Object.values(result).filter((v) => v > 1).length > 0;
+// }
+
+// console.log(isIsogram("Dermatoglyphics")); // true
+// console.log(isIsogram("isogram")); // true
+// console.log(isIsogram("aba")); // false, "same chars may not be adjacent"
+// console.log(isIsogram("moOse")); // false, "same chars may not be same case"
+// console.log(isIsogram("isIsogram")); // false
+// console.log(isIsogram("")); // true, "an empty string is a valid isogram"
+//----------------------------------------------------------------------------------------------------------
