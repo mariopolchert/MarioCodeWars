@@ -2275,3 +2275,75 @@
 // console.log(isIsogram("isIsogram")); // false
 // console.log(isIsogram("")); // true, "an empty string is a valid isogram"
 //----------------------------------------------------------------------------------------------------------
+// 7 kyu  Shortest Word
+// Simple, given a string of words, return the length of the shortest word(s).
+// String will never be empty and you do not need to account for different data types.
+
+// const findShort = (s) =>
+//     Array.from(s.split(" ")).reduce(
+//         (a, c, i) =>
+//             i === 0 ? (a = c.length) : c.length < a ? (a = c.length) : a,
+//         0
+//     );
+
+// // TODO function findShort(s) {
+// //     return Math.min.apply(
+// //         null,
+// //         s.split(" ").map((w) => w.length)
+// //     );
+// // }
+
+// // TODO function findShort(s) {
+// //     return Math.min(...s.split(" ").map((s) => s.length));
+// // }
+
+// console.log(findShort("bitcoin take over the world maybe who knows perhaps")); // 3
+// console.log(
+//     findShort(
+//         "turns out random test cases are easier than writing out basic ones"
+//     )
+// ); // 3
+// console.log(findShort("Let's travel abroad shall we")); // 2
+//------------------------------------------------------------------------------------------------------------------
+// 7 kyu Sum of two lowest positive integers
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+// For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+// [10, 343445353, 3453445, 3453545353453] should return 3453455.
+
+// const sumTwoSmallestNumbers = (n) =>
+//     n.sort((a, b) => a - b).reduce((a, c, i) => (i < 2 ? a + c : a + 0), 0);
+
+// TODO    function sumTwoSmallestNumbers(numbers) {
+//         var [ a, b ] = numbers.sort((a, b) => a - b)
+//         return a + b
+//       }
+
+// console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22])); // 13 , "Sum should be 13"
+// console.log(sumTwoSmallestNumbers([15, 28, 4, 2, 43])); // 6 , "Sum should be 6"
+// console.log(sumTwoSmallestNumbers([3, 87, 45, 12, 7])); // 10 , "Sum should be 10"
+// console.log(sumTwoSmallestNumbers([23, 71, 33, 82, 1])); // 24 , "Sum should be 24"
+// console.log(sumTwoSmallestNumbers([52, 76, 14, 12, 4])); // 16 , "Sum should be 16"
+//-----------------------------------------------------------------------------------------------------------------
+// 7 kyu   Beginner Series #3 Sum of Numbers
+// Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+// Note: a and b are not ordered!
+// Examples (a, b) --> output (explanation)
+// (1, 0) --> 1 (1 + 0 = 1)
+// (1, 2) --> 3 (1 + 2 = 3)
+// (0, 1) --> 1 (0 + 1 = 1)
+// (1, 1) --> 1 (1 since both are same)
+// (-1, 0) --> -1 (-1 + 0 = -1)
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+
+// function getSum(a, b) {
+//     [a, b] = [a, b].sort((a, b) => a - b);
+//     let sum = 0;
+//     for (let i = a; i <= b; i++) {
+//         sum += i;
+//     }
+//     return sum;
+// }
+
+// console.log(getSum(0, -1)); //-1
+// console.log(getSum(0, 1)); //1
+//---------------------------------------------------------------------------------------------------------------
