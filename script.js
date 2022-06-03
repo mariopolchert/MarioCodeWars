@@ -2374,3 +2374,337 @@
 // console.log(accum("EvidjUnokmM")); // "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm"
 // console.log(accum("HbideVbxncC")); // "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc"
 //------------------------------------------------------------------------------------------------------------------
+// 7 kyu Credit Card Mask
+// Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+// Your task is to write a function maskify, which changes all but the last four characters into '#'.
+// "4556364607935616" --> "############5616"
+//      "64607935616" -->      "#######5616"
+//                "1" -->                "1"
+//                 "" -->                 ""
+// // "What was the name of your first pet?"
+// "Skippy" --> "##ippy"
+// "Nananananananananananananananana Batman!"
+// "####################################man!"
+
+// return masked string
+// const maskify = (cc) =>
+//     cc.length < 5
+//         ? cc
+//         : cc.substring(0, cc.length - 4).replace(/[\s\S]/g, "#") +
+//           cc.substring(cc.length - 4);
+
+// TODO  function maskify(cc) {
+//     return cc.replace(/.(?=....)/g, '#');
+//   }
+
+// console.log(maskify("w#qsrw##e##rwjsw")); // '############wjsw'
+// console.log(maskify("4556364607935616")); // '############5616'
+// console.log(maskify("1")); // '1'
+// console.log(maskify("11111")); // '#1111'
+// expected 'w#qsrw##e##rwjsw' to equal '############wjsw'
+//--------------------------------------------------------------------------------------------------------------------
+// 7 kyu   Friend or Foe?
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+// i.e.
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+// Note: keep the original order of the names in the output.
+// const friend = (f) => f.filter((f) => f.length === 4);
+
+// console.log(friend(["Ryan", "Kieran", "Mark"])); // ["Ryan", "Mark"]
+// console.log(friend(["Ryan", "Jimmy", "123", "4", "Cool Man"])); // ["Ryan"]
+// console.log(
+//     friend(["Jimm", "Cari", "aret", "truehdnviegkwgvke", "sixtyiscooooool"])
+// ); // ["Jimm", "Cari", "aret"]
+// console.log(friend(["Love", "Your", "Face", "1"])); // ["Love", "Your", "Face"]
+//----------------------------------------------------------------------------------------------------------------------
+// 7 kyu Is this a triangle?
+// Implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length and false in any other case.
+// // (In this case, all triangles must have surface greater than 0 to be accepted).
+
+// const isTriangle = (a, b, c) => {
+//     let r = [a, b, c].sort((x, y) => x - y);
+//     return r[0] + r[1] > r[2];
+// };
+
+// // isTriangle(7,1,8) should equal false
+
+// console.log(isTriangle(1, 2, 2)); // true
+// console.log(isTriangle(7, 2, 2)); // false
+// console.log(isTriangle(7, 1, 8)); // false
+//------------------------------------------------------------------------------------------------------------------------
+// 7 kyu Two to One
+// Take 2 strings s1 and s2 including only letters from ato z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+// a = "xyaabbbccccdefww"
+// b = "xxxxyyyyabklmopq"
+// longest(a, b) -> "abcdefklmopqwxy"
+// a = "abcdefghijklmnopqrstuvwxyz"
+// longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+// const longest = (s1, s2) =>
+//     Array.from(new Set([...s1, ...s2]))
+//         .sort()
+//         .join("");
+
+//  TODO  const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+
+// console.log(longest("aretheyhere", "yestheyarehere")); // "aehrsty"
+// console.log(longest("loopingisfunbutdangerous", "lessdangerousthancoding")); // "abcdefghilnoprstu"
+// console.log(longest("inmanylanguages", "theresapairoffunctions")); // "acefghilmnoprstuy"
+//----------------------------------------------------------------------------------------------------------------------
+// 7 kyu Find the next perfect square!
+// You might know some pretty large perfect squares. But what about the NEXT one?
+// Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+// If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
+// Examples:(Input --> Output)
+// 121 --> 144
+// 625 --> 676
+// 114 --> -1 since 114 is not a perfect square
+
+// const findNextSquare = (sq) =>
+//     Number.isInteger(sq ** 0.5) ? (sq ** 0.5 + 1) ** 2 : -1;
+
+// console.log(findNextSquare(121)); // 144, "Wrong output for 121"
+// console.log(findNextSquare(625)); // 676, "Wrong output for 625"
+// console.log(findNextSquare(319225)); // 320356, "Wrong output for 319225"
+// console.log(findNextSquare(15241383936)); // 15241630849, "Wrong output for 15241383936"
+// console.log(findNextSquare(155)); // -1, "Wrong output for 155"
+// console.log(findNextSquare(342786627)); // -1, "Wrong output for 342786627"
+//----------------------------------------------------------------------------------------------------------------------
+// 6 kyu  Split Strings
+// Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+// * 'abc' =>  ['ab', 'c_']
+// * 'abcdef' => ['ab', 'cd', 'ef']
+
+// function solution(str) {
+//     str = str.split("");
+//     let r = [];
+//     while (str.length > 0) {
+//         str.length > 1
+//             ? r.push(str.splice(0, 2).join(""))
+//             : r.push(str.splice(0, 1) + "_");
+//     }
+//     return r;
+// }
+
+// function solution(s){
+// TODO     return (s+"_").match(/.{2}/g)||[]
+//  }
+
+// console.log(solution("abcdef")); // ["ab", "cd", "ef"]
+// console.log(solution("abcdefg")); // ["ab", "cd", "ef", "g_"]
+// console.log(solution("")); // []
+//-------------------------------------------------------------------------------------------------------------------------
+// 6 kyu Find the unique number
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+// findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// It’s guaranteed that array contains at least 3 numbers.
+// The tests contain some very huge arrays, so think about performance.
+// This is the first kata in series:
+//     Find the unique number (this kata)
+//     Find the unique string
+//     Find The Unique
+
+// const findUniq = (arr) => {
+//     arr.sort((a, b) => a - b);
+//     return arr[0] === arr[1] ? arr.pop() : arr.shift();
+// };
+
+// console.log(findUniq([1, 0, 0])); // 1
+// console.log(findUniq([0, 1, 0])); // 1
+// console.log(findUniq([0, 0, 1])); // 1
+// console.log(findUniq([1, 1, 1, 2, 1, 1])); // 2
+// console.log(findUniq([1, 1, 2, 1, 1])); // 2
+// console.log(findUniq([3, 10, 3, 3, 3])); // 10
+// console.log(findUniq([13, 10, 13, 13, 13])); // 10
+//-----------------------------------------------------------------------------------------------------------------
+// 6 kyu Are they the "same"?
+// Given two arrays a and b write a function comp(a, b) (orcompSame(a, b)) that checks whether the two arrays have the "same" elements, with the same multiplicities (the multiplicity of a member is the number of times it appears). "Same" means, here, that the elements in b are the elements in a squared, regardless of the order.
+// Valid arrays
+// a = [121, 144, 19, 161, 19, 144, 19, 11]
+// b = [121, 14641, 20736, 361, 25921, 361, 20736, 361]
+
+// function comp(array1, array2) {
+//     array1.map((n) => {
+//         if (array2.includes(n ** 2)) array2.splice(array2.indexOf(n ** 2), 1);
+//         else return false;
+//     });
+//     console.log(array1);
+//     console.log(array2);
+//     return array2.length === 0 ? true : false;
+// }
+
+// TODO function comp(a, b) {
+//     return !!a && !!b && a.map(x => x*x).sort().join() == b.sort().join();
+//   }
+
+// a1 = [121, 144, 19, 161, 19, 144, 19, 11];
+// a2 = [
+//     11 * 11,
+//     121 * 121,
+//     144 * 144,
+//     19 * 19,
+//     161 * 161,
+//     19 * 19,
+//     144 * 144,
+//     19 * 19,
+// ];
+// console.log(comp(a1, a2)); // true
+// console.log(
+//     comp(
+//         [3, 8, 5, 2, 4, 3, 0, 1, 4, 9, 1, 2, 5, 5, 7, 3, 9, 5],
+//         [25, 0, 9, 10, 64, 16, 4, 1, 16, 4, 81, 25, 81, 9, 49, 25, 1, 25]
+//     )
+// );
+// // It should work with random inputs too - Expected: false, instead got: true
+// //  TODO  const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
+// console.log(
+//     comp(
+//         [9, 4, 0, 4, 4, 8, 6, 1, 1, 6, 7, 10, 0, 2, 3, 8, 7, 5],
+//         [49, 25, 36, 81, 16, 0, 4, 100, 16, 49, 9, 16, 64, 1, 64, 36, 1, 1]
+//     )
+// );
+// // It should work with random inputs too - Expected: false, instead got: true
+//-------------------------------------------------------------------------------------------------------------------
+// 6 kyu Find the missing letter
+// Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.
+// You will always get an valid array. And it will be always exactly one letter be missing. The length of the array will always be at least 2.
+// The array will always contain letters in only one case.
+// ['a','b','c','d','f'] -> 'e' ['O','Q','R','S'] -> 'P'
+// ["a","b","c","d","f"] -> "e"
+// ["O","Q","R","S"] -> "P"
+// (Use the English alphabet with 26 letters!)
+// Have fun coding it and please don't forget to vote and rank this kata! :-)
+// I have also created other katas. Take a look if you enjoyed this kata!
+// const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+// function findMissingLetter(array) {
+//     const alphabet = [
+//         "a",
+//         "b",
+//         "c",
+//         "d",
+//         "e",
+//         "f",
+//         "g",
+//         "h",
+//         "i",
+//         "j",
+//         "k",
+//         "l",
+//         "m",
+//         "n",
+//         "o",
+//         "p",
+//         "q",
+//         "r",
+//         "s",
+//         "t",
+//         "u",
+//         "v",
+//         "w",
+//         "x",
+//         "y",
+//         "z",
+//     ];
+//     let upper = false;
+//     if (/[A-Z]/.test(array[0])) {
+//         upper = true;
+//         array = array.map((n) => n.toLowerCase());
+//     }
+//     let first = alphabet.indexOf(array[0]);
+//     for (let i = 1; i < array.length; i++) {
+//         if (array[i] !== alphabet[first + i]) {
+//             return upper
+//                 ? alphabet[first + i].toUpperCase()
+//                 : alphabet[first + i];
+//         }
+//     }
+// }
+
+// console.log(findMissingLetter(["a", "b", "c", "d", "f"])); // 'e'
+// console.log(findMissingLetter(["O", "Q", "R", "S"])); // 'P'
+//--------------------------------------------------------------------------------------------------------------------------
+// 6 kyu Build Tower
+// Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
+// For example, a tower with 3 floors looks like this:
+// [
+//   "  *  ",
+//   " *** ",
+//   "*****"
+// ]
+// And a tower with 6 floors looks like this:
+// [
+//   "     *     ",
+//   "    ***    ",
+//   "   *****   ",
+//   "  *******  ",
+//   " ********* ",
+//   "***********"
+// // ]
+
+// function towerBuilder(nFloors) {
+//     let r = [];
+//     let j = 0;
+//     for (let i = 1; i <= nFloors; i++) {
+//         r.push(
+//             " ".repeat(nFloors - i) +
+//                 "*".repeat(1 + j) +
+//                 " ".repeat(nFloors - i)
+//         );
+//         j += 2;
+//     }
+//     nFloors = r;
+//     return nFloors;
+// }
+
+// console.log(towerBuilder(1)); // ["*"]
+// console.log(towerBuilder(2)); // [" * ","***"]
+// console.log(towerBuilder(3)); // ["  *  "," *** ","*****"]
+// // expected [ '*', '***' ] to deeply equal [ ' * ', '***' ]
+// // expected [ ' * ', ' *** ' ] to deeply equal [ ' * ', '***' ]
+//-----------------------------------------------------------------------------------------------------------------
+// 6 kyu  Highest Scoring Word
+// Given a string of words, you need to find the highest scoring word.
+// Each letter of a word scores points according to its position in the alphabet: a = 1, b = 2, c = 3 etc.
+// You need to return the highest scoring word as a string.
+// If two words score the same, return the word that appears earliest in the original string.
+// All letters will be lowercase and all inputs will be valid.
+
+// function high(x) {
+//     const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+//     x = x.split(" ");
+//     let sum = 0;
+//     let max = 0;
+//     let r = "";
+//     for (let word of x) {
+//         for (let l of word) {
+//             sum += alphabet.indexOf(l) + 1;
+//         }
+//         if (sum > max) {
+//             max = sum;
+//             r = word;
+//         }
+//         sum = 0;
+//     }
+//     return r;
+// }
+
+// function high(s){
+//     let as = s.split(' ').map(s=>[...s].reduce((a,b)=>a+b.charCodeAt(0)-96,0));
+//     return s.split(' ')[as.indexOf(Math.max(...as))];
+//   }
+
+
+// console.log(high("man i need a taxi up to ubud")); // 'taxi'
+// console.log(high("what time are we climbing up the volcano")); // 'volcano'
+// console.log(high("take me to semynak")); // 'semynak'
+// console.log(high("aa b")); // 'aa'
+// console.log(high("b aa")); // 'b'
+// console.log(high("bb d")); // 'bb'
+// console.log(high("d bb")); // 'd'
+// console.log(high("aaa b")); // 'aaa'
+//---------------------------------------------------------------------------------------------------------------
+// Ranked up to 4kyu
