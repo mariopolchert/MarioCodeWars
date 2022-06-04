@@ -2697,7 +2697,6 @@
 //     return s.split(' ')[as.indexOf(Math.max(...as))];
 //   }
 
-
 // console.log(high("man i need a taxi up to ubud")); // 'taxi'
 // console.log(high("what time are we climbing up the volcano")); // 'volcano'
 // console.log(high("take me to semynak")); // 'semynak'
@@ -2708,3 +2707,57 @@
 // console.log(high("aaa b")); // 'aaa'
 //---------------------------------------------------------------------------------------------------------------
 // Ranked up to 4kyu
+//---------------------------------------------------------------------------------------------------------------
+// 6 kyu +1 Array
+// Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
+//     the array can't be empty
+//     only non-negative, single digit integers are allowed
+// Return nil (or your language's equivalent) for invalid inputs.
+// Examples
+// For example the array [2, 3, 9] equals 239, adding one would return the array [2, 4, 0].
+// [4, 3, 2, 5] would return [4, 3, 2, 6]
+
+// function upArray(arr) {
+//     if (arr.some((n) => n < 0 || n > 9) || arr.length === 0) return null;
+//     arr[arr.length - 1]++;
+//     let counter = arr.length - 1;
+//     while (arr[counter] > 9) {
+//         if (counter === 0) {
+//             arr[counter] %= 10;
+//             arr.unshift(1);
+//         } else {
+//             arr[counter] %= 10;
+//             arr[counter - 1]++;
+//             counter--;
+//         }
+//     }
+//     return arr;
+// }
+
+// // Expected: '[1, 0, 0, 0]', instead got: '[0, 0, 0]'
+
+// console.log(upArray([9, 9, 9])); // [1,0,0,0]
+// console.log(upArray([2, 3, 9])); // [2,4,0]
+// console.log(upArray([4, 3, 2, 5])); // [4,3,2,6]
+// console.log(upArray([1, -9])); // null
+//----------------------------------------------------------------------------------------------------
+// 8 kyu Be Concise II - I Need Squares
+// You are given a program squaresOnly that accepts an array of natural numbers up to and including 100 (and including 0) of length >= 1, array, and returns a new array containing only square numbers that have appeared in the input array.
+// Refactor the solution to use as few characters as possible. There is a maximum character limit of 127. Here are a few hints:
+//     There are a lot of handy built-in Array methods in Javascript that you may have never heard of even after completing a basic course in Javascript (e.g. those provided by Codecademy) - well, at least I haven't heard of until quite recently. You may also want to research any new built-in methods offered by ES6, the newest specification of Javascript at the time of writing.
+//     Don't you think the array parameter is a bit wordy? ;)
+
+// function squaresOnly(array) {
+//     return array.filter((n) => Number.isInteger(n ** 0.5));
+// }
+
+// console.log(squaresOnly([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // [0,1,4,9]
+// console.log(squaresOnly([31, 33, 35, 37, 39, 38, 36, 34, 32])); // [36]
+// console.log(squaresOnly([0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])); // [0,100]
+// console.log(squaresOnly([20, 19, 18, 17, 16, 15, 13, 11, 9, 1, 5, 4])); // [16,9,1,4]
+// console.log(
+//     squaresOnly([
+//         45, 36, 75, 64, 9, 9, 4, 1, 4, 1, 1, 16, 16, 18, 17, 35, 25, 35,
+//     ])
+// ); // [36,64,9,9,4,1,4,1,1,16,16,25]
+//-------------------------------------------------------------------------------------------------------
