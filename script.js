@@ -2809,3 +2809,70 @@
 // console.log(solution([20, 2, 10])); // [2,10,20]
 // console.log(solution([2, 20, 10])); // [2,10,20]
 //-------------------------------------------------------------------------------------------------
+// 7 kyu Testing 1-2-3
+// Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+// number([]) // => []
+// number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
+
+// const number = (a) => a.map((l, i) => `${i + 1}: ${l}`);
+
+// console.log(number([])); // [], 'Empty array should return empty array'
+// console.log(number(["a", "b", "c"])); // ["1: a", "2: b", "3: c"], 'Return the correct line numbers'
+//---------------------------------------------------------------------------------------
+// 7 kyu Make a function that does arithmetic!
+// Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+// a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
+// The four operators are "add", "subtract", "divide", "multiply".
+// A few examples:(Input1, Input2, Input3 --> Output)
+// 5, 2, "add"      --> 7
+// 5, 2, "subtract" --> 3
+// 5, 2, "multiply" --> 10
+// 5, 2, "divide"   --> 2.5
+// Try to do it without using if statements!
+
+// const arithmetic = (a, b, o) =>
+//     o[0] === "a" ? a + b : o[0] === "s" ? a - b : o[0] === "m" ? a * b : a / b;
+
+// console.log(arithmetic(1, 2, "add")); // 3, "'add' should return the two numbers added together!"
+// console.log(arithmetic(8, 2, "subtract")); // 6, "'subtract' should return a minus b!"
+// console.log(arithmetic(5, 2, "multiply")); // 10, "'multiply' should return a multiplied by b!"
+// console.log(arithmetic(8, 2, "divide")); // 4, "'divide' should return a divided by b!"
+
+// function arithmetic(a, b, operator) {
+//     const operation = {
+//         add(a, b) {
+//             return a + b;
+//         },
+//         subtract(a, b) {
+//             return a - b;
+//         },
+//         multiply(a, b) {
+//             return a * b;
+//         },
+//         divide(a, b) {
+//             return a / b;
+//         },
+//     };
+//     return operation[operator](a, b);
+// }
+
+// function arithmetic(a, b, operator) {
+//     const ccase = {
+//         add: a + b,
+//         subtract: a - b,
+//         multiply: a * b,
+//         divide: a / b,
+//     };
+//     return ccase[operator];
+// }
+
+//  TODO const arithmetic = (a, b, operator) =>
+//     ({
+//         add: a + b,
+//         subtract: a - b,
+//         multiply: a * b,
+//         divide: a / b,
+//     }[operator]);
+//--------------------------------------------------------------------------------------
