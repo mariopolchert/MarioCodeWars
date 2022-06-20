@@ -2898,3 +2898,39 @@
 // console.log(twoSum([1234, 5678, 9012], 14690)); //  sort(numericalCompare), [1,2]);
 // console.log(twoSum([2, 2, 3], 4)); //  sort(numericalCompare), [0,1]);
 //--------------------------------------------------------------------------------------------
+// 6 kyu Write Number in Expanded Form
+// Write Number in Expanded Form
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+// expandedForm(70304); // Should return '70000 + 300 + 4'
+// NOTE: All numbers will be whole numbers greater than 0.
+
+// function expandedForm(num) {
+//     numStr = num
+//         .toString()
+//         .split("")
+//         .reduce(
+//             (a, c, i, arr) =>
+//                 c > 0 ? a + c + "0".repeat(arr.length - i - 1) : a,
+//             []
+//         )
+//         .match(/[1-9]0*/g)
+//         .reduce((a, c, i) => (i === 0 ? a : `${a} + ${c}`));
+//     return numStr;
+// }
+
+// TODO function expandedForm(num) {
+//     return String(num)
+//             .split("")
+//             .map((num, index, arr) => num + "0".repeat(arr.length - index -1 ))
+//             .filter((num) => Number(num) != 0)
+//             .join(" + ")
+//   }
+
+//  TODO expandedForm = n => [...String(n)].reverse().map((x,i) => x == '0' ? '' : x + '0'.repeat(i)).filter(x => x != '').reverse().join(' + ')
+
+// console.log(expandedForm(12)); // '10 + 2');
+// console.log(expandedForm(42)); // '40 + 2');
+// console.log(expandedForm(70304)); // '70000 + 300 + 4');
+//-----------------------------------------------------------------------------------------
