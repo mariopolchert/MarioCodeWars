@@ -2934,3 +2934,51 @@
 // console.log(expandedForm(42)); // '40 + 2');
 // console.log(expandedForm(70304)); // '70000 + 300 + 4');
 //-----------------------------------------------------------------------------------------
+
+// 6 kyu Mexican Wave
+// In this simple Kata your task is to create a function that turns a string into a Mexican Wave. You will be passed a string and you must return that string in an array where an uppercase letter is a person standing up.
+//  1.  The input string will always be lower case but maybe empty.
+//  2.  If the character in the string is whitespace then pass over it as if it was an empty seat
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+
+// function wave(str) {
+//     let len = str.length;
+//     str = { ...str };
+//     let temp = "";
+//     let result = [];
+//     for (let i = 0; i < len; i++) {
+//         for (let [key, value] of Object.entries(str)) {
+//             if (value !== " " && key == i.toString()) {
+//                 temp += value.toUpperCase();
+//             } else temp += value;
+//         }
+//         if (str[i] !== " ") result.push(temp);
+//         temp = "";
+//     }
+//     return result;
+// }
+
+// TODO var wave=w=>[...w].map((a,i)=>w.slice(0,i)+a.toUpperCase()+w.slice(i+1)).filter(a=>a!=w)
+
+// console.log(wave("hello")); // ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+// console.log(wave("codewars")); // ["Codewars", "cOdewars", "coDewars", "codEwars", "codeWars", "codewArs", "codewaRs", "codewarS"]
+// console.log(wave("")); // []
+// console.log(wave("two words")); // ["Two words", "tWo words", "twO words", "two Words", "two wOrds", "two woRds", "two worDs", "two wordS"]
+// console.log(wave(" gap ")); // [" Gap ", " gAp ", " gaP "]
+//-----------------------------------------------------------------------------------------------
+// 6 kyu Count characters in your string
+// The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+// What if the string is empty? Then the result should be empty object literal, {}.
+
+// function count(s) {
+//     let r = {};
+//     [...s].map((l) => (r[l] ? r[l]++ : (r[l] = 1)));
+//     return r;
+// }
+
+// // TODO const count = string =>
+// //   [...string].reduce((pre, val) => (pre[val] = -~pre[val], pre), {});
+
+// console.log(count("aba")); // { a: 2, b: 1 }
+// console.log(count("")); // {}
+//----------------------------------------------------------------------------------------------
