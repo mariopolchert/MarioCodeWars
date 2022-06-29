@@ -3024,3 +3024,19 @@
 // console.log(sumDigPow(50, 150)); // [89, 135]
 // console.log(sumDigPow(10, 150)); // [89, 135]
 //---------------------------------------------------------------------------------------------
+// 6 kyu Break camelCase
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+
+// complete the function
+// const solution = (s) => [...s].map((l) => (l.match(/[A-Z]/g) ? " " + l : l)).join("");
+
+// TODO function solution(string) {
+//     return(string.replace(/([A-Z])/g, ' $1'));
+//   }
+
+// console.log(solution("camelCasing")); // 'camel Casing', 'Unexpected result'
+// console.log(solution("camelCasingTest")); // 'camel Casing Test', 'Unexpected result'
+//-----------------------------------------------------------------------------------------------
