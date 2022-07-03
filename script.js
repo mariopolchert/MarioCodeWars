@@ -3084,3 +3084,28 @@
 // console.log(invert([])); // []
 // console.log(invert([0])); // [-0]
 //---------------------------------------------------------------------------------------
+// 6 kyu  Rectangle into Squares
+// The drawing below gives an idea of how to cut a given "true" rectangle into squares ("true" rectangle meaning that the two dimensions are different).
+// You will be given two dimensions
+//     a positive integer length
+//     a positive integer width
+// You will return a collection or a string (depending on the language; Shell bash, PowerShell, Pascal and Fortran return a string) with the size of each of the squares.
+// Examples in general form:
+//   sqInRect(5, 3) should return [3, 2, 1, 1]
+//   sqInRect(3, 5) should return [3, 2, 1, 1]
+
+// function sqInRect(h, v) {
+//     if (h === v) return null;
+//     let r = [];
+//     while (h * v > 0) {
+//         r.push(h < v ? h : v);
+//         h < v ? (v -= h) : (h -= v);
+//     }
+//     return r;
+// }
+
+// console.log(sqInRect(5, 5)); // null
+// console.log(sqInRect(5, 3)); // [3, 2, 1, 1]
+// console.log(sqInRect(3, 5)); // [3, 2, 1, 1]
+// console.log(sqInRect(20, 14)); // [14, 6, 6, 2, 2, 2]
+//-------------------------------------------------------------------------------------
