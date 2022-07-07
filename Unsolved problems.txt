@@ -325,3 +325,30 @@ console.log(scramble("commas", "commas")); //true
 console.log(scramble("sammoc", "commas")); //tru
 
 Not Fast Enough
+---------------------------------------------------------------------
+// 4 kyu Don't give me five! Really!
+// This kata is the performance version of Don't give me five by user5036852.
+// Your mission, should you accept it, is to return the count of all integers in a given range which do not contain the digit 5 (in base 10 representation).
+// You are given the start and the end of the integer range. The start and the end are both inclusive.
+// 1,9 -> 1,2,3,4,6,7,8,9 -> return 8
+// 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> return 12
+// The result may contain fives. ;-)
+// The start will always be smaller than the end. Both numbers can be also negative.
+// The regions can be very large and there will be a large number of test cases. So brute force solutions will certainly time out!
+// Good luck, warrior!
+
+function dontGiveMeFive(s, e) {
+    let c = 0;
+    for (let i = s; i <= e; i++) {
+        if (Array.from(i.toString()).find((x) => x === "5")) {
+            continue;
+        } else c++;
+    }
+    return c;
+}
+
+console.log(dontGiveMeFive(40076, 40096)); //
+// console.log(dontGiveMeFive(40076, 215151422963990)); // 49707598394353
+// console.log(dontGiveMeFive(-206981731, 223575697903165)); // 51841599744277
+// console.log(dontGiveMeFive(-249022878360451, -249022878219653)); // 79380
+console.log(dontGiveMeFive(-90000000000000, 900000000000000)); // 203349266266321
