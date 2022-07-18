@@ -3135,4 +3135,39 @@
 // console.log(dontGiveMeFive(1, 9)); // 8
 // console.log(dontGiveMeFive(4, 17)); // 12
 //-----------------------------------------------------------------------------------
+// 8 kyu Twice as old
+// Your function takes two arguments:
+//     current father's age (years)
+//     current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old).
 
+// function twiceAsOld(d, s) {
+//     {
+//         for (let i = 0; i <= d; i++) {
+//             if (d + i === (s + i) * 2) return i;
+//             if (d - i === (s - i) * 2) return i;
+//         }
+//     }
+// }
+
+// // TODO const twiceAsOld = (d, s) => Math.abs(d - 2 * s);
+
+// console.log(twiceAsOld(36, 7)); // 22
+// console.log(twiceAsOld(55, 30)); // 5
+// console.log(twiceAsOld(42, 21)); // 0
+// console.log(twiceAsOld(22, 1)); // 20
+// console.log(twiceAsOld(29, 0)); // 29
+//----------------------------------------------------------------------------------
+// 8 kyu Pillars
+// There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
+//     number of pillars (≥ 1);
+//     distance between pillars (10 - 30 meters);
+//     width of the pillar (10 - 50 centimeters).
+// Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
+
+// const pillars = (n, d, w) => (n - 2 < 0 ? 0 : (n - 1) * d * 100 + (n - 2) * w);
+
+// console.log(pillars(1, 10, 10)); // 0     0
+// console.log(pillars(2, 20, 25)); //  2000   2
+// console.log(pillars(11, 15, 30)); // 15270  15.27
+//-------------------------------------------------------------------------------
