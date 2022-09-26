@@ -3171,3 +3171,20 @@
 // console.log(pillars(2, 20, 25)); //  2000   2
 // console.log(pillars(11, 15, 30)); // 15270  15.27
 //-------------------------------------------------------------------------------
+// 8 kyu Thinkful - Logic Drills: Traffic light
+// You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
+// Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
+// For example, when the input is green, output should be yellow.
+
+// const updateLight = (current) => current === "green" ? "yellow" : current === "red" ? "green" : "red";
+
+// console.log(updateLight("green")); // "yellow"
+// console.log(updateLight("yellow")); // "red"
+// console.log(updateLight("red")); // "green"
+
+// TODO const updateLight = current => ({
+//     green: 'yellow',
+//     yellow: 'red',
+//     red: 'green',
+//   })[current]
+//------------------------------------------------------------------------------
