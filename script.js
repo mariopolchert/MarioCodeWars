@@ -3188,3 +3188,61 @@
 //     red: 'green',
 //   })[current]
 //------------------------------------------------------------------------------
+// 8 kyu Remove String Spaces
+// Simple, remove the spaces from the string, then return the resultant string.
+
+// const noSpace = (x) => x.replaceAll(" ", "");
+// const noSpace = (x) => {
+//     let r = "";
+//     for (let i = 0; i < x.length; i++) {
+//         x[i] === " " ? (r += "") : (r += x[i]);
+//     }
+//     return r;
+// };
+
+// console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B")); // '8j8mBliB8gimjB8B8jlB'
+// console.log(noSpace("8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd")); // '88Bifk8hB8BB8BBBB888chl8BhBfd'
+// console.log(noSpace("8aaaaa dddd r     ")); // '8aaaaaddddr'
+//------------------------------------------------------------------------------
+// 8 kyu Count of positives / sum of negatives
+// Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
+// If the input is an empty array or is null, return an empty array.
+// Example
+// For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+// function countPositivesSumNegatives(input) {
+//     let p = 0;
+//     let n = 0;
+//     if (input.length === 0) return [];
+//     for (let i = 0; i < input.length; i++) {
+//         if (input[i] > 0) p++;
+//         else if (input[i] < 0) n -= input[i];
+//     }
+//     return [p, n * -1];
+// }
+
+// function countPositivesSumNegatives(input) {
+//     if (input == null || !input.length) return [];
+//     let p = 0;
+//     let n = 0;
+//     for (let i = 0; i < input.length; i++) {
+//         if (input[i] > 0) p++;
+//         else if (input[i] < 0) n += input[i];
+//     }
+//     return [p, n];
+// }
+
+// console.log(
+//     countPositivesSumNegatives([
+//         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15,
+//     ])
+// ); //[10, -65]
+// console.log(
+//     countPositivesSumNegatives([
+//         0, 2, 3, 0, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14,
+//     ])
+// ); //[8, -50]
+// console.log(countPositivesSumNegatives([]));
+// console.log(countPositivesSumNegatives(null));
+//-------------------------------------------------------------------
