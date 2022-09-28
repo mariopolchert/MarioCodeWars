@@ -3246,3 +3246,15 @@
 // console.log(countPositivesSumNegatives([]));
 // console.log(countPositivesSumNegatives(null));
 //-------------------------------------------------------------------
+// 8 kyu Remove duplicates from list
+// Define a function that removes duplicates from an array of numbers and returns it as a result.
+// The order of the sequence has to stay the same.
+
+// const distinct = (a) => Array.from(new Set(a));
+
+// // TODO const distinct = a => [...new Set(a)];
+
+// console.log(distinct([1])); // [1]
+// console.log(distinct([1, 2])); // [1,2]
+// console.log(distinct([1, 1, 2])); // [1,2]
+//-------------------------------------------------------------------
