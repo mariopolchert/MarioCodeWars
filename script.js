@@ -3258,3 +3258,49 @@
 // console.log(distinct([1, 2])); // [1,2]
 // console.log(distinct([1, 1, 2])); // [1,2]
 //-------------------------------------------------------------------
+// 8 kyu Is it even?
+// In this Kata we are passing a number (n) into a function.
+// Your code will determine if the number passed is even (or not).
+// The function needs to return either a true or false.
+// Numbers may be positive or negative, integers or floats.
+// Floats with decimal part non equal to zero are considered UNeven for this kata.
+
+// const testEven = (n) => (n % 2 === 0 ? true : false);
+
+// console.log(testEven(0)); // true, "testEven for 0"
+// console.log(testEven(0.5)); // false, "testEven for 0.5"
+// console.log(testEven(1)); // false, "testEven for 1"
+// console.log(testEven(2)); // true, "testEven for 2"
+// console.log(testEven(-4)); // true, "testEven for 2"
+//-----------------------------------------------------------------
+// 6 kyu Build a pile of Cubes
+// Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of n3 n^3n 3
+// , the cube above will have volume of (n−1)3 (n-1)^3(n−1) 3
+// and so on until the top which will have a volume of 13 1^31 3
+// You are given the total volume m of the building. Being given m can you find the number n of cubes you will have to build?
+// The parameter of the function findNb (find_nb, find-nb, findNb, ...) will be an integer m and you have to return the integer n such as n3+(n−1)3+...+13=m n^3 + (n-1)^3 + ... + 1^3 = mn 3+(n−1) 3+...+1 3=m if such a n exists or -1 if there is no such n.
+// findNb(1071225) --> 45
+// findNb(91716553919377) --> -1
+
+// function findNb(m) {
+//     let sum = 0;
+//     let s = 1;
+//     while (sum < m) {
+//         sum += s ** 3;
+//         s++;
+//     }
+//     return sum === m ? s - 1 : -1;
+// }
+
+// TODO function findNb(m) {
+//     var n = 0
+//     while (m > 0) m -= ++n**3
+//     return m ? -1 : n
+//   }
+
+// console.log(findNb(36)); // 3
+// console.log(findNb(4183059834009)); // 2022
+// console.log(findNb(24723578342962)); // -1
+// console.log(findNb(135440716410000)); // 4824
+// console.log(findNb(40539911473216)); // 3568
+//---------------------------------------------------------------------------------
