@@ -2892,7 +2892,7 @@
 //     }
 // }
 
-// TODO twoSum=(n,t,r)=>[r=n.indexOf(n.filter(u=>n.includes(t-u))[0]),n.lastIndexOf(t-n[r])]
+// TODO twoSum=(n,t,r)=>[r=n.indexOf(n.filter(u=>n.includes(t-u))[0])); //  n.lastIndex(t-n[r])]
 
 // console.log(twoSum([1, 2, 3], 4)); //  sort(numericalCompare), [0,2]);
 // console.log(twoSum([1234, 5678, 9012], 14690)); //  sort(numericalCompare), [1,2]);
@@ -3304,3 +3304,16 @@
 // console.log(findNb(135440716410000)); // 4824
 // console.log(findNb(40539911473216)); // 3568
 //---------------------------------------------------------------------------------
+// 8 kyu Sum of positive
+// You get an array of numbers, return the sum of all of the positives ones.
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+// Note: if there is nothing to sum, the sum is default to 0.
+
+// const positiveSum = (arr) => !arr ? 0 : arr.reduce((a, c) => (c >= 0 ? a + c : a), 0);
+
+// console.log(positiveSum([1, 2, 3, 4, 5])); //  15
+// console.log(positiveSum([1, -2, 3, 4, 5])); //  13
+// console.log(positiveSum([])); //  0
+// console.log(positiveSum([-1, -2, -3, -4, -5])); //  0
+// console.log(positiveSum([-1, 2, 3, 4, -5])); //  9
+//------------------------------------------------------------------------------------
