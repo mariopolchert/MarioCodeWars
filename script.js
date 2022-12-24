@@ -1,22 +1,22 @@
-// const list = document.querySelector("ul");
-// const inputNumber = document.querySelector("#inputNumber");
-// const submitBtn = document.querySelector(".submit");
+// const list = document.querySelector("ul"
+// const inputNumber = document.querySelector("#inputNumber"
+// const submitBtn = document.querySelector(".submit"
 
 // const listNumbers = (number) => {
 //     // location.reload();
 //     for (let i = 1; i < number; i++) {
 //         if (i % 3 === 0 && i % 5 === 0) {
-//             writeNumbers("fizzbuzz");
+//             writeNumbers("fizzbuzz"
 //         } else if (i % 3 === 0) {
-//             writeNumbers("fizz");
+//             writeNumbers("fizz"
 //         } else if (i % 5 === 0) {
-//             writeNumbers("buzz");
+//             writeNumbers("buzz"
 //         } else writeNumbers(i);
 //     }
 // };
 
 // const writeNumbers = (element) => {
-//     let listItem = document.createElement("li");
+//     let listItem = document.createElement("li"
 //     listItem.innerText = element;
 //     list.appendChild(listItem);
 // };
@@ -28,7 +28,7 @@
 // const movies = ["Star Wars", "Inception", "Batman", "Superman"];
 
 // movies.forEach((elem) => {
-//     let movie = document.createElement("h2");
+//     let movie = document.createElement("h2"
 //     movie.innerText = elem;
 //     document.body.appendChild(movie);
 // });
@@ -45,7 +45,7 @@
 //     return result;
 // }
 
-// (5, 25), [5, 10, 15, 20, 25])
+// (5, 25));    // [5, 10, 15, 20, 25])
 
 // const findMultiples = (int, lim) => (lim > int ? int : (int += int));
 // const findMultiples = (int, lim) => {
@@ -92,7 +92,7 @@
 //---------------------------------------------------------------
 // const betterThanAverage = (c, y) => c.reduce((a, c) => a + c, 0) / c.length < y;
 
-// // ("betterThanAverage([2, 3], 5) should return True");
+// // ("betterThanAverage([2, 3], 5) should return True"
 // console.log(betterThanAverage([2, 3, 5], 5));
 // ----------------------------------------------------------------------------
 // function solve(s) {
@@ -117,12 +117,12 @@
 //    Solve("*'&ABCDabcde12345") = [4,5,5,3].
 // --the order is: uppercase letters, lowercase, numbers and special characters.
 
-// Test.assertDeepEquals(solve("Codewars@codewars123.com"),[1,18,3,2]);
-// Test.assertDeepEquals(solve("bgA5<1d-tOwUZTS8yQ"),[7,6,3,2]);
-// Test.assertDeepEquals(solve("P*K4%>mQUDaG$h=cx2?.Czt7!Zn16p@5H"),[9,9,6,9]);
-// Test.assertDeepEquals(solve("RYT'>s&gO-.CM9AKeH?,5317tWGpS<*x2ukXZD"),[15,8,6,9]);
-// Test.assertDeepEquals(solve("$Cnl)Sr<7bBW-&qLHI!mY41ODe"), [10,7,3,6])
-// Test.assertDeepEquals(solve("@mw>0=QD-iAx!rp9TaG?o&M%l$34L.nbft"), [7,13,4,10]);
+// Test.assertDeepEquals(solve("Codewars@codewars123.com"));    //[1,18,3,2]);
+// Test.assertDeepEquals(solve("bgA5<1d-tOwUZTS8yQ"));  //[7,6,3,2]);
+// Test.assertDeepEquals(solve("P*K4%>mQUDaG$h=cx2?.Czt7!Zn16p@5H"));   //[9,9,6,9]);
+// Test.assertDeepEquals(solve("RYT'>s&gO-.CM9AKeH?,5317tWGpS<*x2ukXZD"));  //[15,8,6,9]);
+// Test.assertDeepEquals(solve("$Cnl)Sr<7bBW-&qLHI!mY41ODe"));  // [10,7,3,6])
+// Test.assertDeepEquals(solve("@mw>0=QD-iAx!rp9TaG?o&M%l$34L.nbft"));  // [7,13,4,10]);
 // -------------------------------------------------------------------------------------
 
 // const zeroAndOne = (s) =>
@@ -161,9 +161,9 @@
 // }
 
 // console.log(capitalizeWord("glasswear"));
-// // Test.assertSimilar(capitalizeWord('word'), 'Word');
-// // Test.assertSimilar(capitalizeWord('i'), 'I');
-// // Test.assertSimilar(capitalizeWord('glasswear'), 'Glasswear');
+// // Test.assertSimilar(capitalizeWord('word'));   // 'Word');
+// // Test.assertSimilar(capitalizeWord('i'));  // 'I');
+// // Test.assertSimilar(capitalizeWord('glasswear'));  // 'Glasswear');
 // ------------------------------------------------------------------------------
 
 // solution = (molarMass1, molarMass2, givenMass1, givenMass2, volume, temp) => {
@@ -236,7 +236,7 @@
 // //expected [ 1, 3, 4, 5, 5 ] to deeply equal [ 5, 5, 4, 3, 1 ]
 //----------------------------------------------------------------------------
 //
-// const quadratic = (x1, x2) => [1, -(x1 + x2), x1 * x2];
+// const quadratic = (x1, x2) => [1, -(x1 + x2));   // x1 * x2];
 
 // // quadratic(1,2) = (1, -3, 2)
 // // This means (x-1) * (x-2) = 0; when we do the multiplication this becomes x^2 - 3x + 2 = 0
@@ -337,7 +337,7 @@
 //         if (letter === String.fromCharCode(92)) {
 //             str = str.replace(letter, `${"\nn"}`);
 //         } else if (vowels.includes(letter)) {
-//             str = str.replace(letter, "");
+//             str = str.replace(letter, ""
 //         }
 //     }
 //     return str;
@@ -345,17 +345,17 @@
 
 // function disemvowel(str) {
 //     vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-//     str = str.replace("\n", "\\\\n");
-//     str = str.replace("'v", " \\'v");
+//     str = str.replace("\n", "\\\\n"
+//     str = str.replace("'v", " \\'v"
 
 //     for (let l of str) {
 //         if (vowels.includes(l)) {
-//             str = str.replace(l, "");
+//             str = str.replace(l, ""
 //         }
 //     }
 //     return str;
 // }
-// disemvowel = (str) => str.replace(/[aeiou]/gi, "");
+// disemvowel = (str) => str.replace(/[aeiou]/gi, ""
 
 // console.log(disemvowel("This website is for losers LOL!")); // "Ths wbst s fr lsrs LL!"
 // console.log(
@@ -392,7 +392,7 @@
 
 // function nameToSlices(name) {
 //     if (typeof name === "string" && name !== "") {
-//         const arr = name.split(" ");
+//         const arr = name.split(" "
 //         let sum = 0;
 //         if (arr.length <= 1 && arr[0] === "bread") return null;
 //         for (let i = 0; i < arr.length; i++) {
@@ -471,13 +471,13 @@
 //     this.legs = legs;
 //     this.eyes = eyes;
 //     this.makeSound = function () {
-//         console.log("meek");
+//         console.log("meek"
 //     };
 //     this.run = function () {
 //         console.log(`${this.name} is running`);
 //     };
 //     this.jump = function () {
-//         console.log("mouse is jumping");
+//         console.log("mouse is jumping"
 //     };
 
 //     return this;
@@ -516,7 +516,7 @@
 //     let octal = (p) =>
 //         !p
 //             ? 0
-//             : 4 * +(p[0] === "r") + 2 * +(p[1] === "w") + 1 * +(p[2] === "x");
+//             : 4 * +(p[0] === "r") + 2 * +(p[1] === "w") + 1 * +(p[2] === "x"
 
 //     return "" + octal(perm.user) + octal(perm.group) + octal(perm.other);
 // }
@@ -558,14 +558,14 @@
 
 // function to_nato(words) {
 //     const i = [",", ".", "!", "?"];
-//     // words = words.toLowerCase().replaceAll(" ", "").split("");
-//     words = words.toLowerCase().trim().split("");
+//     // words = words.toLowerCase().replaceAll(" ", "").split(""
+//     words = words.toLowerCase().trim().split(""
 //     let result = [];
 //     words.forEach((item) => {
 //         if (NATO.hasOwnProperty(item)) result.push(NATO[item]);
 //         else if (i.includes(item)) result.push(item);
 //     });
-//     result = result.join(" ");
+//     result = result.join(" "
 //     return result;
 // }
 
@@ -584,7 +584,7 @@
 //         .toLowerCase()
 //         .split("")
 //         .map((e) => (NATO[e] ? NATO[e] : e))
-//         .join(" ");
+//         .join(" "
 // }
 
 // console.log(to_nato("If you can read")); // "India Foxtrot Yankee Oscar Uniform Charlie Alfa November Romeo Echo A
@@ -670,7 +670,7 @@
 //     let result = "";
 //     if (key === 0) return message;
 //     if (!message || message === "") return "";
-//     message = message.split("");
+//     message = message.split(""
 //     for (let letter of message) {
 //         if (/[A-Za-z]/.test(letter)) {
 //             alphabet.forEach((pair, i, a) => {
@@ -706,11 +706,11 @@
 //     });
 // }
 
-// console.log(encryptor(13, ""), ""); // ''
-// console.log(encryptor(0, "no cypher"), "no cypher"); // 'no cypher'
-// console.log(encryptor(13, "Caesar Cipher"), "===Pnrfne Pvcure - Caesar Cipher"); // 'Pnrfne Pvcure'
-// console.log(encryptor(-5, "Hello World!"), "Czggj Rjmgy!"); // 'Czggj Rjmgy!'
-// console.log(encryptor(27, "Whoopi Goldberg"), "Xippqj Hpmecfsh"); //'Xippqj Hpmecfsh'
+// console.log(encryptor(13, ""));  // "" // ''
+// console.log(encryptor(0, "no cypher"));  // "no cypher" // 'no cypher'
+// console.log(encryptor(13, "Caesar Cipher")); // "===Pnrfne Pvcure - Caesar Cipher" // 'Pnrfne Pvcure'
+// console.log(encryptor(-5, "Hello World!"));  // "Czggj Rjmgy!" // 'Czggj Rjmgy!'
+// console.log(encryptor(27, "Whoopi Goldberg"));   // "Xippqj Hpmecfsh" //'Xippqj Hpmecfsh'
 
 // function myfunction(key) {
 //     let result = ((key % 26) + 26) % 26;
@@ -800,8 +800,8 @@
 //           ).reduce((x, y) => x + y);
 
 // function solution(number) {
-//     var n3 = Math.floor(--number / 3),
-//         n5 = Math.floor(number / 5),
+//     var n3 = Math.floor(--number / 3));  //
+//         n5 = Math.floor(number / 5));    //
 //         n15 = Math.floor(number / 15);
 //     return (3 * n3 * (n3 + 1) + 5 * n5 * (n5 + 1) - 15 * n15 * (n15 + 1)) / 2;
 // }
@@ -844,7 +844,7 @@
 // // [0, 1, 2, 3, 4]
 // console.log(arr);
 
-// assert(Array.isArray(whiteBlackAreas([3,1,2,7,1],[1,8,4,5,2])), 'Returned solution should be an array')
+// assert(Array.isArray(whiteBlackAreas([3,1,2,7,1],[1,8,4,5,2]))); // 'Returned solution should be an array')
 // console.log(whiteBlackAreas([3, 1, 2, 7, 1], [1, 8, 4, 5, 2])); // [146,134], 'Returned solution should give total white area = 146, total black area = 134, returned as a 2-element array')
 //console.log(whiteBlackAreas([1, 1, 1, 1], [0, 0, 0])); // [146,134], 'Returned solution should give total white area = 146, total black area = 134, returned as a 2-element array')
 //console.log(whiteBlackAreas([0, 0, 0, 0], [1, 1, 1])); // [146,134], 'Returned solution should give total white area = 146, total black area = 134, returned as a 2-element array')
@@ -926,12 +926,12 @@
 // // If a value is present in b, all of its occurrences must be removed from the other:
 // // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
-// console.log(arrayDiff([1, 2], [1])); // [2], "a was [1,2], b was [1]");
-// console.log(arrayDiff([1, 2, 2], [1])); // [2, 2], "a was [1,2,2], b was [1]");
-// console.log(arrayDiff([1, 2, 2], [2])); // [1], "a was [1,2,2], b was [2]");
-// console.log(arrayDiff([1, 2, 2], [])); // [1, 2, 2], "a was [1,2,2], b was []");
-// console.log(arrayDiff([], [1, 2])); // [], "a was [], b was [1,2]");
-// console.log(arrayDiff([1, 2, 3], [1, 2])); // [3], "a was [1,2,3], b was [1,2]");
+// console.log(arrayDiff([1, 2], [1])); // [2], "a was [1,2], b was [1]"
+// console.log(arrayDiff([1, 2, 2], [1])); // [2, 2], "a was [1,2,2], b was [1]"
+// console.log(arrayDiff([1, 2, 2], [2])); // [1], "a was [1,2,2], b was [2]"
+// console.log(arrayDiff([1, 2, 2], [])); // [1, 2, 2], "a was [1,2,2], b was []"
+// console.log(arrayDiff([], [1, 2])); // [], "a was [], b was [1,2]"
+// console.log(arrayDiff([1, 2, 3], [1, 2])); // [3], "a was [1,2,3], b was [1,2]"
 
 //----------------------------------------------------------------------------------------------------------------------------
 // function solution(roman) {
@@ -1013,7 +1013,7 @@
 //     for (let i in w) {
 //         w.indexOf(w.charAt(i)) !== w.lastIndexOf(w.charAt(i))
 //             ? (result += ")")
-//             : (result += "(");
+//             : (result += "("
 //     }
 //     return result;
 // }
@@ -1037,7 +1037,7 @@
 //-------------------------------------------------------------------------------------
 
 // function warnTheSheep(arr) {
-//     let wolfIndex = arr.findIndex((el) => el === "wolf");
+//     let wolfIndex = arr.findIndex((el) => el === "wolf"
 //     return wolfIndex === arr.length - 1
 //         ? "Pls go away and stop eating my sheep"
 //         : `Oi! Sheep number ${
@@ -1122,7 +1122,7 @@
 // ----------------------------------------------------------------------------------------
 // function findOdd(A) {
 //     const o = A.reduce(function (a, c) {
-//         return a[c] ? ++a[c] : (a[c] = 1), a;
+//         return a[c] ? ++a[c] : (a[c] = 1));  // a;
 //     }, {});
 //     let odd;
 //     for (const [k, v] of Object.entries(o)) {
@@ -1194,7 +1194,7 @@
 //         .map((c) => {
 //             return c.length > 4 ? (c = c.split("").reverse().join("")) : c;
 //         })
-//         .join(" ");
+//         .join(" "
 // }
 
 // // TODO function spinWords(string){
@@ -1417,7 +1417,7 @@
 // ""  -->  ""
 
 // function order(w) {
-//     let a = w.split(" ");
+//     let a = w.split(" "
 //     let o = {};
 //     a.forEach((e) => {
 //         o[e.match(/[1-9]/g)] = e;
@@ -1538,7 +1538,7 @@
 //   }
 
 // // function pigIt(str) {
-// //     str = str.split(" ");
+// //     str = str.split(" "
 // //     let result = "";
 // //     str.forEach((item) => {
 // //         result += /\w/.test(item) ? item.slice(1) + item[0] + "ay " : item;
@@ -1587,9 +1587,9 @@
 // console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1,2,3]
 //--------------------------------------------------------------------------------------------------------
 // A Narcissistic Number is a positive number which is the sum of its own digits, each raised to the power of the number of digits in a given base. In this Kata, we will restrict ourselves to decimal (base 10).
-// For example, take 153 (3 digits), which is narcisstic:
+// For example, take 153 (3 digits));   // which is narcisstic:
 //     1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153
-// and 1652 (4 digits), which isn't:
+// and 1652 (4 digits));    // which isn't:
 //     1^4 + 6^4 + 5^4 + 2^4 = 1 + 1296 + 625 + 16 = 1938
 
 // const narcissistic = (v) =>
@@ -1713,7 +1713,7 @@
 // digPow(46288, 3) should return 51 since 4³ + 6⁴+ 2⁵ + 8⁶ + 8⁷ = 2360688 = 46288 * 51
 
 // const digPow = (n, p) => {
-//     const r = Array.from(n.toString()).reduce((a, c, i) => a + c ** (p + i), 0);
+//     const r = Array.from(n.toString()).reduce((a, c, i) => a + c ** (p + i));    // 0);
 //     return r % n === 0 ? r / n : -1;
 // };
 
@@ -1794,9 +1794,9 @@
 // Highest and lowest
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 // Example
-// highAndLow("1 2 3 4 5");  // return "5 1"
-// highAndLow("1 2 -3 4 5"); // return "5 -3"
-// highAndLow("1 9 3 4 -5"); // return "9 -5"
+// highAndLow("1 2 3 4 5"  // return "5 1"
+// highAndLow("1 2 -3 4 5" // return "5 -3"
+// highAndLow("1 9 3 4 -5" // return "9 -5"
 // Notes
 //     All numbers are valid Int32, no need to validate them.
 //     There will always be at least one number in the input string.
@@ -1826,7 +1826,7 @@
 //                 ? (l = String.fromCharCode(code(l.charCodeAt())))
 //                 : l;
 //         })
-//         .join("");
+//         .join(""
 //     return message;
 // }
 
@@ -1872,7 +1872,7 @@
 // -----------------------------------------------------------------------------------------------------------
 // Pete the baker 5kyu
 // Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. Can you help him to find out, how many cakes he could bake considering his recipes?
-// Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
+// Write a function cakes());   // which takes the recipe (object) and the available ingredients (also an object) and returns the maximum number of cakes Pete can bake (integer). For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). Ingredients that are not present in the objects, can be considered as 0.
 // Examples:
 // // must return 2
 // cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200});
@@ -1895,7 +1895,7 @@
 // }
 // // TODO function cakes(recipe, available) {
 // //     return Object.keys(recipe).reduce(function(val, ingredient) {
-// //       return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0), val)
+// //       return Math.min(Math.floor(available[ingredient] / recipe[ingredient] || 0));   // val)
 // //     }, Infinity)
 // //   }
 
@@ -1919,7 +1919,7 @@
 // function moveZeros(arr) {
 //     for (let n of arr) {
 //         if (n === 0) {
-//             arr.splice(arr.indexOf(n), 1);
+//             arr.splice(arr.indexOf(n));  // 1);
 //             arr.push(0);
 //         }
 //     }
@@ -1953,7 +1953,7 @@
 //     result = result
 //         .map((n) => n.toString(16).toUpperCase())
 //         .map((n) => (n.length < 2 ? 0 + n : n))
-//         .join("");
+//         .join(""
 //     return result;
 // };
 
@@ -1999,7 +1999,7 @@
 // 8 kyu   Convert boolean values to strings 'Yes' or 'No'.
 // Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-// const boolToWord = (bool) => (bool ? "Yes" : "No");
+// const boolToWord = (bool) => (bool ? "Yes" : "No"
 
 // console.log(boolToWord(true));
 // console.log(boolToWord(false));
@@ -2009,7 +2009,7 @@
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
 
-// const solution = (str) => str.split("").reverse().join("");
+// const solution = (str) => str.split("").reverse().join(""
 // console.log(solution("world")); // 'dlrow'
 // console.log(solution("hello")); // 'olleh'
 // console.log(solution("")); // ''
@@ -2035,7 +2035,7 @@
 // Note: if there is nothing to sum, the sum is default to 0.
 
 // const positiveSum = (arr) =>
-//     arr.reduce((a, c) => (a > 0 ? a : 0) + (c > 0 ? c : 0), 0);
+//     arr.reduce((a, c) => (a > 0 ? a : 0) + (c > 0 ? c : 0)); // 0);
 
 // console.log(positiveSum([1, 2, 3, 4, 5])); //15
 // console.log(positiveSum([1, -2, 3, 4, 5])); //13
@@ -2110,7 +2110,7 @@
 //     name
 //         .split(" ")
 //         .map((n) => n[0].toUpperCase())
-//         .join(".");
+//         .join("."
 // console.log(abbrevName("Sam Harris")); // "S.H"
 // console.log(abbrevName("Patrick Feenan")); // "P.F"
 // console.log(abbrevName("Evan Cole")); // "E.C"
@@ -2146,7 +2146,7 @@
 // should return "found the needle at position 5" (in COBOL "found the needle at position 6")
 
 // function findNeedle(h) {
-//     let n = h.findIndex((w) => w === "needle");
+//     let n = h.findIndex((w) => w === "needle"
 //     return n !== -1
 //         ? `found the needle at position ${n}`
 //         : "Your function didn't return anything";
@@ -2185,7 +2185,7 @@
 // function getMiddle(s) {
 //     return s.length % 2 === 0
 //         ? s.slice(s.length / 2 - 1, s.length / 2 + 1)
-//         : s.slice(Math.floor(s.length / 2), Math.floor(s.length / 2) + 1);
+//         : s.slice(Math.floor(s.length / 2)); // Math.floor(s.length / 2) + 1);
 // }
 
 // console.log(getMiddle("test")); //"es"
@@ -2239,7 +2239,7 @@
 // XO("zzoo") => false
 
 // function XO(str) {
-//     str = str.toLowerCase().split("");
+//     str = str.toLowerCase().split(""
 //     return (
 //         str.filter((x) => x === "x").length ===
 //         str.filter((o) => o === "o").length
@@ -2260,7 +2260,7 @@
 
 // function isIsogram(str) {
 //     let result = {};
-//     str = str.toLowerCase().split("");
+//     str = str.toLowerCase().split(""
 //     str.forEach((s) => {
 //         if (!result[s]) result[s] = 1;
 //         else result[s] += 1;
@@ -2311,7 +2311,7 @@
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 // const sumTwoSmallestNumbers = (n) =>
-//     n.sort((a, b) => a - b).reduce((a, c, i) => (i < 2 ? a + c : a + 0), 0);
+//     n.sort((a, b) => a - b).reduce((a, c, i) => (i < 2 ? a + c : a + 0));    // 0);
 
 // TODO    function sumTwoSmallestNumbers(numbers) {
 //         var [ a, b ] = numbers.sort((a, b) => a - b)
@@ -2361,7 +2361,7 @@
 //     }
 //     return result
 //         .map((w) => w[0].toUpperCase() + w.slice(1).toLowerCase())
-//         .join("-");
+//         .join("-"
 // }
 
 // // TODO function accum(s) {
@@ -2445,7 +2445,7 @@
 // const longest = (s1, s2) =>
 //     Array.from(new Set([...s1, ...s2]))
 //         .sort()
-//         .join("");
+//         .join(""
 
 //  TODO  const longest = (s1, s2) => [...new Set(s1+s2)].sort().join('')
 
@@ -2478,12 +2478,12 @@
 // * 'abcdef' => ['ab', 'cd', 'ef']
 
 // function solution(str) {
-//     str = str.split("");
+//     str = str.split(""
 //     let r = [];
 //     while (str.length > 0) {
 //         str.length > 1
 //             ? r.push(str.splice(0, 2).join(""))
-//             : r.push(str.splice(0, 1) + "_");
+//             : r.push(str.splice(0, 1) + "_"
 //     }
 //     return r;
 // }
@@ -2528,7 +2528,7 @@
 
 // function comp(array1, array2) {
 //     array1.map((n) => {
-//         if (array2.includes(n ** 2)) array2.splice(array2.indexOf(n ** 2), 1);
+//         if (array2.includes(n ** 2)) array2.splice(array2.indexOf(n ** 2));  // 1);
 //         else return false;
 //     });
 //     console.log(array1);
@@ -2674,8 +2674,8 @@
 // All letters will be lowercase and all inputs will be valid.
 
 // function high(x) {
-//     const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-//     x = x.split(" ");
+//     const alphabet = "abcdefghijklmnopqrstuvwxyz".split(""
+//     x = x.split(" "
 //     let sum = 0;
 //     let max = 0;
 //     let r = "";
@@ -2774,8 +2774,8 @@
 // };
 
 // const m = new Person();
-// m.fillFriends("Ana");
-// m.fillFriends("Frank");
+// m.fillFriends("Ana"
+// m.fillFriends("Frank"
 // console.log(m);
 // // expected [ [ 'bob', 'john' ] ] to deeply equal [ 'bob', 'john' ]
 //--------------------------------------------------------------------------------------------------------
@@ -2789,11 +2789,11 @@
 //     return `http://www.codewars.com/users/${encodeURIComponent(user)}`;
 // }
 
-// console.log(generateLink("matt c")); // ("http://www.codewars.com/users/matt%20c");
+// console.log(generateLink("matt c")); // ("http://www.codewars.com/users/matt%20c"
 // console.log(generateLink("g964")); // "http://www.codewars.com/users/g964"
-// console.log(generateLink("GiacomoSorbi")); // ("http://www.codewars.com/users/GiacomoSorbi");
-// console.log(generateLink("ZozoFouchtra")); // ("http://www.codewars.com/users/ZozoFouchtra");
-// console.log(generateLink("colbydauph")); // ("http://www.codewars.com/users/colbydauph");
+// console.log(generateLink("GiacomoSorbi")); // ("http://www.codewars.com/users/GiacomoSorbi"
+// console.log(generateLink("ZozoFouchtra")); // ("http://www.codewars.com/users/ZozoFouchtra"
+// console.log(generateLink("colbydauph")); // ("http://www.codewars.com/users/colbydauph"
 // console.log(generateLink("m_polchert")); // 'https://www.codewars.com/users/m_polchert'
 //--------------------------------------------------------------------------------------------------------
 // 7 kyu Sort Numbers
@@ -2822,7 +2822,7 @@
 // console.log(number(["a", "b", "c"])); // ["1: a", "2: b", "3: c"], 'Return the correct line numbers'
 //---------------------------------------------------------------------------------------
 // 7 kyu Make a function that does arithmetic!
-// Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
+// Given two numbers and an arithmetic operator (the name of it, as a string)); // return the result of the two numbers having that operator used on them.
 // a and b will both be positive integers, and a will always be the first number in the operation, and b always the second.
 // The four operators are "add", "subtract", "divide", "multiply".
 // A few examples:(Input1, Input2, Input3 --> Output)
@@ -2894,9 +2894,9 @@
 
 // TODO twoSum=(n,t,r)=>[r=n.indexOf(n.filter(u=>n.includes(t-u))[0])); //  n.lastIndex(t-n[r])]
 
-// console.log(twoSum([1, 2, 3], 4)); //  sort(numericalCompare), [0,2]);
-// console.log(twoSum([1234, 5678, 9012], 14690)); //  sort(numericalCompare), [1,2]);
-// console.log(twoSum([2, 2, 3], 4)); //  sort(numericalCompare), [0,1]);
+// console.log(twoSum([1, 2, 3], 4)); //  sort(numericalCompare));  // [0,2]);
+// console.log(twoSum([1234, 5678, 9012], 14690)); //  sort(numericalCompare)); // [1,2]);
+// console.log(twoSum([2, 2, 3], 4)); //  sort(numericalCompare));  // [0,1]);
 //--------------------------------------------------------------------------------------------
 // 6 kyu Write Number in Expanded Form
 // Write Number in Expanded Form
@@ -2977,7 +2977,7 @@
 // }
 
 // // TODO const count = string =>
-// //   [...string].reduce((pre, val) => (pre[val] = -~pre[val], pre), {});
+// //   [...string].reduce((pre, val) => (pre[val] = -~pre[val], pre)); // {});
 
 // console.log(count("aba")); // { a: 2, b: 1 }
 // console.log(count("")); // {}
@@ -3031,7 +3031,7 @@
 // ""             =>  ""
 
 // complete the function
-// const solution = (s) => [...s].map((l) => (l.match(/[A-Z]/g) ? " " + l : l)).join("");
+// const solution = (s) => [...s].map((l) => (l.match(/[A-Z]/g) ? " " + l : l)).join(""
 
 // TODO function solution(string) {
 //     return(string.replace(/([A-Z])/g, ' $1'));
@@ -3191,7 +3191,7 @@
 // 8 kyu Remove String Spaces
 // Simple, remove the spaces from the string, then return the resultant string.
 
-// const noSpace = (x) => x.replaceAll(" ", "");
+// const noSpace = (x) => x.replaceAll(" ", ""
 // const noSpace = (x) => {
 //     let r = "";
 //     for (let i = 0; i < x.length; i++) {
@@ -3309,7 +3309,7 @@
 // Example [1,-4,7,12] => 1 + 7 + 12 = 20
 // Note: if there is nothing to sum, the sum is default to 0.
 
-// const positiveSum = (arr) => !arr ? 0 : arr.reduce((a, c) => (c >= 0 ? a + c : a), 0);
+// const positiveSum = (arr) => !arr ? 0 : arr.reduce((a, c) => (c >= 0 ? a + c : a));  // 0);
 
 // console.log(positiveSum([1, 2, 3, 4, 5])); //  15
 // console.log(positiveSum([1, -2, 3, 4, 5])); //  13
@@ -3317,3 +3317,17 @@
 // console.log(positiveSum([-1, -2, -3, -4, -5])); //  0
 // console.log(positiveSum([-1, 2, 3, 4, -5])); //  9
 //------------------------------------------------------------------------------------
+// 8 kyu Square(n) Sum
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+// function squareSum(numbers) {
+//     if (numbers) return numbers.reduce((a, c) => a + c ** 2, 0);
+// }
+
+// const squareSum = (n) => (n.length ? n.reduce((a, c) => a + c ** 2, 0) : 0);
+
+// console.log(squareSum([1, 2])); // 5
+// console.log(squareSum([0, 3, 4, 5])); //50
+// console.log(squareSum([])); // 0
+//-------------------------------------------------------------------------------------
