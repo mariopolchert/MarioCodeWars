@@ -3360,4 +3360,46 @@
 // console.log(multiplicationTable(5));
 // console.log(multiplicationTable(4));
 // console.log(multiplicationTable(3));
+// TODO:
+//  multiplicationTable = function(n) {
+//   return Array.from({length:n},(_,i)=>Array.from({length:n},(_,j)=>(i+1)*(j+1)))
+//}
+// TODO: const multiplicationTable=s=>Array(s).fill().map((a,i)=>Array(s).fill().map((e,j)=>(1+i)*(1+j)))
 //--------------------------------------------------------------------------
+// 6 kyu Make the Deadfish Swim
+// Write a simple parser that will parse and run Deadfish.
+// Deadfish has 4 commands, each 1 character long:
+//     i increments the value (initially 0)
+//     d decrements the value
+//     s squares the value
+//     o outputs the value into the return array
+// Invalid characters should be ignored.
+// parse("iiisdoso") => [ 8, 64 ]
+
+// Return the output array, and ignore all non-op characters
+// function parse(data) {
+//     let result = 0;
+//     let resultArr = [];
+//     for (let i = 0; i < data.length; i++) {
+//         switch (data[i]) {
+//             case "i":
+//                 result++;
+//                 break;
+//             case "d":
+//                 result--;
+//                 break;
+//             case "s":
+//                 result *= result;
+//                 break;
+//             case "o":
+//                 resultArr.push(result);
+//             default:
+//                 continue;
+//         }
+//     }
+//     return resultArr;
+// }
+
+// console.log(parse("iiisdoso")); // [ 8, 64 ]
+// console.log(parse("iiisxxxdoso")); // [ 8, 64 ]
+//------------------------------------------------------------
