@@ -3403,3 +3403,89 @@
 // console.log(parse("iiisdoso")); // [ 8, 64 ]
 // console.log(parse("iiisxxxdoso")); // [ 8, 64 ]
 //------------------------------------------------------------
+// 6 kyu Good vs Evil
+// Middle Earth is about to go to war. The forces of good will have many battles with the forces of evil. Different races will certainly be involved. Each race has a certain worth when battling against others. On the side of good we have the following races, with their associated worth:
+//     Hobbits: 1
+//     Men: 2
+//     Elves: 3
+//     Dwarves: 3
+//     Eagles: 4
+//     Wizards: 10
+// On the side of evil we have:
+//     Orcs: 1
+//     Men: 2
+//     Wargs: 2
+//     Goblins: 2
+//     Uruk Hai: 3
+//     Trolls: 5
+//     Wizards: 10
+// The function will be given two parameters. Each parameter will be a string of multiple integers separated by a single space. Each string will contain the count of each race on the side of good and evil.
+// The first parameter will contain the count of each race on the side of good in the following order:
+//     Hobbits, Men, Elves, Dwarves, Eagles, Wizards.
+// The second parameter will contain the count of each race on the side of evil in the following order:
+//     Orcs, Men, Wargs, Goblins, Uruk Hai, Trolls, Wizards.
+// All values are non-negative integers. The resulting sum of the worth for each side will not exceed the limit of a 32-bit integer.
+// Output:
+// Return "Battle Result: Good triumphs over Evil" if good wins, "Battle Result: Evil eradicates all trace of Good" if evil wins, or "Battle Result: No victor on this battle field" if it ends in a tie.
+
+// function goodVsEvil(good, evil) {
+//     const goodResult = [...good.split(" ")]
+//         .map((e) => Number(e))
+//         .map((el, i) => el * [1, 2, 3, 3, 4, 10][i])
+//         .reduce((sum, el) => sum + el, 0);
+//     const evilResult = [...evil.split(" ")]
+//         .map((e) => Number(e))
+//         .map((el, i) => el * [1, 2, 2, 2, 3, 5, 10][i])
+//         .reduce((sum, el) => sum + el, 0);
+//     return goodResult === evilResult
+//         ? "Battle Result: No victor on this battle field"
+//         : goodResult > evilResult
+//         ? "Battle Result: Good triumphs over Evil"
+//         : "Battle Result: Evil eradicates all trace of Good";
+// }
+// console.log(goodVsEvil("1 1 1 1 1 1", "1 1 1 1 1 1 1")); // 'Battle Result: Evil eradicates all trace of Good'
+// console.log(goodVsEvil("0 0 0 0 0 10", "0 1 1 1 1 0 0")); // 'Battle Result: Good triumphs over Evil'
+// console.log(goodVsEvil("1 0 0 0 0 0", "1 0 0 0 0 0 0")); // 'Battle Result: No victor on this battle field'
+//----------------------------------------------------------------------------------------------
+// 6 kyu Reverse or rotate?
+// The input is a string str of digits. Cut the string into chunks (a chunk here is a substring of the initial string) of size sz (ignore the last chunk if its size is less than sz).
+// If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.
+// If
+//     sz is <= 0 or if str is empty return ""
+//     sz is greater (>) than the length of str it is impossible to take a chunk of size sz hence return "".
+
+// function revrot(str, sz) {
+//     if (sz <= 0 || str === "") return "";
+//     if (sz > str.length) return "";
+//     const numbers = [];
+//     let tempString = str.substring(0, sz);
+//     let multiplier = 1;
+//     while (tempString.length >= sz) {
+//         numbers.push(tempString);
+//         tempString = str.substring(sz * multiplier, sz * multiplier + sz);
+//         multiplier++;
+//     }
+//     const sumOfCubes = (subStr) => {
+//         let result = [...subStr]
+//             .map((l) => Number(l))
+//             .reduce((acc, el) => el ** 3 + acc, 0);
+//         return result % 2 === 0 ? true : false; // true = reverse, false = rotate
+//     };
+//     for (let n of numbers) {
+//         let i = numbers.indexOf(n);
+//         if (sumOfCubes(n)) {
+//             let temp = [...n].reverse().join("");
+//             numbers[i] = temp;
+//         } else {
+//             let first = n[0];
+//             let rest = n.slice(1);
+//             numbers[i] = rest + first;
+//         }
+//     }
+//     return numbers.join("");
+// }
+
+// console.log(revrot("123456987654", 6)); // "234561876549"
+// console.log(revrot("123456987653", 6)); // "234561356789"
+// console.log(revrot("66443875", 4)); // "44668753"
+//-----------------------------------------------------------------------------------
